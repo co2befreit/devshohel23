@@ -1,0 +1,148 @@
+a {
+    transition: 0.2s all ease;
+}
+select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(images/select-input-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 15px) 50%;
+}
+.header-nav {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.header-hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.header-show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.header-show .nav-inner {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+html:not(.no-js) [data-aos="fade-up"] {
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+html:not(.no-js) [data-aos="fade-down"] {
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+}
+
+html:not(.no-js) [data-aos="fade-left"] {
+	-webkit-transform: translate3d(20px,0,0);
+	transform: translate3d(20px,0,0);
+}
+
+html:not(.no-js) [data-aos="fade-right"] {
+	-webkit-transform: translate3d(-20px,0,0);
+	transform: translate3d(-20px,0,0);
+}
+
+ @keyframes custom-pulse {
+    0%,100% { opacity:1; }
+    50% { opacity:0.4; }
+  }
+  .animate-custom-pulse {
+    animation: custom-pulse 2s ease-in-out infinite;
+  }
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.faq-item.open .faq-body {
+  opacity: 1;
+  visibility: visible;
+  padding-bottom: 20px;
+}
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0)
+      }
+  
+      to {
+        transform: translateX(-50%)
+      }
+    }
+  
+    @keyframes scroll-right {
+      from {
+        transform: translateX(-50%)
+      }
+  
+      to {
+        transform: translateX(0)
+      }
+    }
+  
+    .track-left {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 45s linear infinite;
+      cursor: grab;
+    }
+  
+    .track-right {
+      display: flex;
+      width: max-content;
+      animation: scroll-right 45s linear infinite;
+      cursor: grab;
+    }
+  
+    .track-left.paused,
+    .track-right.paused {
+      animation-play-state: paused;
+    }
+  
+    .track-left.dragging,
+    .track-right.dragging {
+      cursor: grabbing;
+      animation-play-state: paused;
+      user-select: none;
+    }
+  
+    .fade-l {
+      background: linear-gradient(to right, #f9fafb 0%, transparent 100%);
+    }
+  
+    .fade-r {
+      background: linear-gradient(to left, #f9fafb 0%, transparent 100%);
+    }
+  
+    .review-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+  
+    .review-card:hover {
+      transform: translateY(-4px);
+    }
+  
+    .quote-svg {
+      opacity: 0.18;
+    }
+  
+    .rating-bar {
+      height: 3px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+  
+    .rating-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(to right, #c8e88a, #87C332);
+    }
+  
