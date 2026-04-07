@@ -254,4 +254,7 @@ html:not(.no-js) [data-aos="fade-right"] {
   background: #f3f4f6;
   color: #6b7280;
 }
-
+input,
+select {
+  outline: none;
+}
