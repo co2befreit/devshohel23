@@ -108,10 +108,6 @@ document.addEventListener("click", (e) => {
 // language dropdown toggler 
 
 
-
-
-
-
 function cloneRow(trackEl) {
   const kids = Array.from(trackEl.children);
   kids.forEach(c => trackEl.appendChild(c.cloneNode(true)));
@@ -202,19 +198,18 @@ makeDraggable(document.getElementById('row2'));
 
 
 
-   // AOS Initialization
 
-    // AOS.init({
-    //     offset: 120,
-    //     delay: 0,
-    //     duration: 1400,
-    //     easing: 'ease',
-    //     once: true,
-    //     mirror: false,
-    //     anchorPlacement: 'top-bottom',
-    // });
+
+
+
+
 
 
 
 });
+
+
+
+
+
 

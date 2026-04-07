@@ -44,16 +44,16 @@
 
                                     <li>
                                         <a class="font-semibold text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
-                                            href="#">Home</a>
+                                            href="/">Home</a>
                                     </li>
 
                                     <li>
                                         <a class="font-medium text- transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
-                                            href="#">About us</a>
+                                            href="about.html">About us</a>
                                     </li>
                                     <li>
                                         <a class="font-medium text-primary transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
-                                            href="#">Products</a>
+                                            href="product.html">Products</a>
                                     </li>
                                     <li>
                                         <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
@@ -210,7 +210,7 @@
                         </button>
                     </div>
 
-                    <div class="relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-white/10">
+                    <div class="relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-white/10 rounded-bl-xl rounded-tl-xl">
 
                         <div class="px-4 sm:px-6 flex items-center justify-between">
                             <h2 id="drawer-title" class="text-base font-semibold text-primary">Menu</h2>
@@ -395,39 +395,36 @@
 
                             <div class="rounded-xl border border-black/10 bg-white/80 p-3">
                                 <div class="flex flex-col lg:flex-row md:gap-y-3 gap-y-3 items-center justify-between">
-                                    <div class="flex items-center gap-3 md:gap-3 lg:gap-5 flex-wrap">
-                                        <div>
-                                            <img class="max-w-[30px] md:max-w-[39px]" src="images/master-card.webp" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[33px] md:max-w-[42px]" src="images/g-pay.webp" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[33px] md:max-w-[42px] opacity-70" src="images/apple-pay.webp" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[33px] md:max-w-[42px]" src="images/visa.png" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[40px] md:max-w-[54px]" src="images/paypal.png" alt="">
-                                        </div>
-                                    </div>
-                                    <button
-                                        class="inline-flex shrink-0 items-center justify-center gap-2 text-base font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors h-11 rounded-lg px-7 py-5 cursor-pointer w-full lg:w-auto"
+                                   
+                                    <button command="show-modal" commandfor="fuelVirtualCardModal" class="inline-flex shrink-0 items-center justify-center gap-2 text-base font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors h-11 rounded-lg px-5 lg:px-6 py-5 cursor-pointer w-full lg:w-auto"
                                         type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="lucide lucide-car">
-                                            <path
-                                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                                            <circle cx="7" cy="17" r="2" />
-                                            <path d="M9 17h6" />
-                                            <circle cx="17" cy="17" r="2" />
-                                        </svg>
-                                        Select card
+                                        <svg class="w-5 h-5 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"></rect><path d="M2 10h20"></path></svg>
+                                        Select Virtual card
+                                    </button>
+
+                                    <button command="show-modal" commandfor="fuelPhysicalCardModal" class="inline-flex shrink-0 items-center justify-center gap-2 text-base font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors h-11 rounded-lg px-5 lg:px-6 py-5 cursor-pointer w-full lg:w-auto"
+                                        type="button">
+                                        <svg class="w-5 h-5 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"></rect><path d="M2 10h20"></path></svg>
+                                        Select Physical card
                                     </button>
                                 </div>
                             </div>
+
+                            <div class="flex items-center justify-center gap-3 md:gap-3 lg:gap-5 flex-wrap">
+                                <div>
+                                    <img class="max-w-[39px]" src="images/master-card.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="max-w-[46px]" src="images/googlePay.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="max-w-[45px]" src="images/visa.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="max-w-[72px]" src="images/paypal.svg" alt="">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -458,20 +455,15 @@
                                 <div
                                     class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 rounded-xl bg-primary/10 border border-lime-200/70">
                                     <div class="flex gap-3 items-start">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"      viewBox="0 0 24 24"
                                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round"
-                                            class="lucide lucide-fuel size-6 mt-0.5 text-lime-700 shrink-0">
-                                            <path
-                                                d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5" />
-                                            <path d="M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16" />
-                                            <path d="M2 21h13" />
-                                            <path d="M3 9h11" />
+                                            class="lucide lucide-zap size-6 mt-0.5 text-lime-700 shrink-0">
+                                            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
                                         </svg>
                                         <div class="flex flex-col">
-                                            <div class="text-muted-foreground text-sm font-normal leading-tight">Supported
-                                                fuel types</div>
-                                            <div class="text-base font-semibold leading-normal">Electric</div>
+                                           <div class="text-muted-foreground text-sm font-normal leading-tight">Supported charge types</div>
+                                            <div class="text-base font-semibold leading-normal">AC / DC</div>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-start">
@@ -550,37 +542,33 @@
 
                             <div class="rounded-xl border border-black/10 bg-white/80 p-3">
                                 <div class="flex flex-col lg:flex-row md:gap-y-3 gap-y-3 items-center justify-between">
-                                    <div class="flex items-center gap-3 md:gap-3 lg:gap-5 flex-wrap">
-                                        <div>
-                                            <img class="max-w-[30px] md:max-w-[39px]" src="images/master-card.webp" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[33px] md:max-w-[42px]" src="images/g-pay.webp" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[33px] md:max-w-[42px] opacity-70" src="images/apple-pay.webp" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[33px] md:max-w-[42px]" src="images/visa.png" alt="">
-                                        </div>
-                                        <div>
-                                            <img class="max-w-[40px] md:max-w-[54px]" src="images/paypal.png" alt="">
-                                        </div>
-                                    </div>
-                                    <button
-                                        class="inline-flex shrink-0 items-center justify-center gap-2 text-base font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors h-11 rounded-lg px-7 py-5 cursor-pointer w-full lg:w-auto"
+                                   
+                                    <button command="show-modal" commandfor="chargingVirtualCardModal" class="inline-flex shrink-0 items-center justify-center gap-2 text-base font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors h-11 rounded-lg px-5 lg:px-6 py-5 cursor-pointer w-full lg:w-auto"
                                         type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="lucide lucide-car">
-                                            <path
-                                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                                            <circle cx="7" cy="17" r="2" />
-                                            <path d="M9 17h6" />
-                                            <circle cx="17" cy="17" r="2" />
-                                        </svg>
-                                        Select card
+                                        <svg class="w-5 h-5 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"></rect><path d="M2 10h20"></path></svg>
+                                        Select Virtual card
                                     </button>
+
+                                    <button command="show-modal" commandfor="chargingPhysicalCardModal" class="inline-flex shrink-0 items-center justify-center gap-2 text-base font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors h-11 rounded-lg px-5 lg:px-6 py-5 cursor-pointer w-full lg:w-auto"
+                                        type="button">
+                                        <svg class="w-5 h-5 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"></rect><path d="M2 10h20"></path></svg>
+                                        Select Physical card
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-center gap-3 md:gap-3 lg:gap-5 flex-wrap">
+                                <div>
+                                    <img class="max-w-[39px]" src="images/master-card.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="max-w-[46px]" src="images/googlePay.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="max-w-[45px]" src="images/visa.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="max-w-[72px]" src="images/paypal.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -739,8 +727,7 @@
     </section>
     <!-- features area -->
 
-
-    <!-- your card area -->
+    <!-- features area -->
     <section class="md:py-16 py-8">
         <div class="container">
 
@@ -829,7 +816,7 @@
             </div>
         </div>
     </section>
-    <!-- your card area -->
+    <!-- features area -->
 
 
     <!-- Get the app area -->
@@ -946,7 +933,7 @@
 
 
     <!-- ═══ FOOTER ═══ -->
-    <footer class="bg-[#000] text-[#d4e8b0] font-grotesk">
+    <footer class="bg-[#EAEAEA] text-[#3a5a10] font-grotesk">
     <div class="container pt-9 md:pt-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.6fr] gap-10">
 
@@ -954,74 +941,74 @@
         <div>
             <div class="flex items-center gap-[10px] mb-4 lg:mb-5.5">
             <a href="/">
-                <img class="max-w-[90px] md:max-w-[100px] xl:max-w-[130px]" src="images/logo-white.png" alt="">
+                <img class="max-w-[90px] md:max-w-[100px] xl:max-w-[130px]" src="images/logo.svg" alt="">
             </a>
             </div>
-            <p class="text-[17px] font-bold text-white mb-2.5 md:mb-3 leading-snug">Drive. Save. Protect the climate.</p>
-            <p class="text-[15.5px] text-white/85 leading-[1.7] mb-3.5 md:mb-5 lg:mb-6">With the CO₂befreit card you drive as usual, save with exclusive benefits and compensate every trip – for real mobility with responsibility.</p>
+            <p class="text-[17px] font-bold text-[#1a2e05] mb-2.5 md:mb-3 leading-snug">Drive. Save. Protect the climate.</p>
+            <p class="text-[15.5px] text-[#3a4a2a] leading-[1.7] mb-3.5 md:mb-5 lg:mb-6">With the CO₂befreit card you drive as usual, save with exclusive benefits and compensate every trip – for real mobility with responsibility.</p>
             <div class="flex gap-2">
-            <a href="/" aria-label="Instagram" class="w-[34px] h-[34px] rounded-lg bg-primary/25 border border-white/[0.1] flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
-                <svg class="w-4 h-4 stroke-[#d4e8b0] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="/" aria-label="Instagram" class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="/" aria-label="Facebook" class="w-[34px] h-[34px] rounded-lg bg-primary/25 border border-white/[0.1] flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
-                <svg class="w-4 h-4 stroke-[#d4e8b0] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <a href="/" aria-label="Facebook" class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
             </div>
         </div>
 
         <!-- Navigation -->
         <div>
-            <div class="text-[15px] font-bold text-white tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/25">Navigation</div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Navigation</div>
             <ul class="flex flex-col gap-[13px] list-none">
-            <li><a href="/" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Home</a></li>
-            <li><a href="/about" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">About us</a></li>
-            <li><a href="/products" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Products</a></li>
-            <li><a href="/die-co2-studie" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">CO₂ study</a></li>
-            <li><a href="/co2-measure" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">CO₂ measurement</a></li>
-            <li><a href="/contact" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Contact</a></li>
+            <li><a href="/" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Home</a></li>
+            <li><a href="/about" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">About us</a></li>
+            <li><a href="/products" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Products</a></li>
+            <li><a href="/die-co2-studie" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂ study</a></li>
+            <li><a href="/co2-measure" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂ measurement</a></li>
+            <li><a href="/contact" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Contact</a></li>
             </ul>
         </div>
 
         <!-- Legal -->
         <div>
-            <div class="text-[15px] font-bold text-white tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/25">Legal</div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Legal</div>
             <ul class="flex flex-col gap-[13px] list-none">
-            <li><a href="/impress" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Imprint</a></li>
-            <li><a href="/data" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Privacy policy (GDPR)</a></li>
-            <li><a href="/condition" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Terms of participation</a></li>
-            <li><a href="/cookie" class="text-[15.5px] text-white/85 no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/50 before:flex-shrink-0 hover:before:bg-primary">Cookie settings</a></li>
+            <li><a href="/impress" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Imprint</a></li>
+            <li><a href="/data" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Privacy policy (GDPR)</a></li>
+            <li><a href="/condition" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Terms of participation</a></li>
+            <li><a href="/cookie" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Cookie settings</a></li>
             </ul>
         </div>
 
         <!-- Contact -->
         <div>
-            <div class="text-[15px] font-bold text-white tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/25">Contact &amp; Support</div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Contact &amp; Support</div>
             <div class="flex items-start gap-[10px] mb-[14px]">
-            <div class="w-8 h-8 bg-primary/25 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
                 <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
             </div>
-            <div class="text-[15px] text-white/85 leading-[1.65]">
-                <strong class="text-white font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Email</strong>
-                <a href="mailto:support@ecofuel-mobility.de" class="text-white/85 no-underline">support@ecofuel-mobility.de</a>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Email</strong>
+                <a href="mailto:support@ecofuel-mobility.de" class="text-[#3a4a2a] no-underline hover:text-primary transition-colors">support@ecofuel-mobility.de</a>
             </div>
             </div>
             <div class="flex items-start gap-[10px] mb-[14px]">
-            <div class="w-8 h-8 bg-primary/25 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
                 <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
             </div>
-            <div class="text-[15px] text-white/85 leading-[1.65]">
-                <strong class="text-white font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Phone</strong>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Phone</strong>
                 +49 (0) XXX - XXX XX XX
             </div>
             </div>
             <div class="flex items-start gap-[10px] mb-[14px]">
-            <div class="w-8 h-8 bg-primary/25 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
                 <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <div class="text-[15px] text-white/85 leading-[1.65]">
-                <strong class="text-white font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Address</strong>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Address</strong>
                 EcoFuel Mobility GmbH, Musterstraße 1, 12345 Berlin<br>
-                <span class="text-white/80 text-[13.5px]">Mon–Fri, 9 a.m.–6 p.m.</span>
+                <span class="text-[#4a5a3a] text-[13.5px]">Mon–Fri, 9 a.m.–6 p.m.</span>
             </div>
             </div>
         </div>
@@ -1032,32 +1019,268 @@
     <!-- Bottom bar -->
     <div class="mt-3 md:mt-8 lg:mt-12 mx-auto">
         <div class="container">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-t border-primary/25 py-5 lg:py-6">
-            <p class="text-[14px] text-white/70 leading-[1.6]">© 2025 EcoFuel Mobility GmbH. All rights reserved.<br>Content is protected by copyright. Reproduction requires written consent.</p>
+            <div class="flex flex-wrap items-center justify-between gap-4 border-t border-primary/30 py-5 lg:py-6">
+            <p class="text-[14px] text-[#4a5a3a] leading-[1.6]">© 2025 EcoFuel Mobility GmbH. All rights reserved.<br>Content is protected by copyright. Reproduction requires written consent.</p>
             
-               <div class="flex items-center justify-end gap-3 md:gap-5 lg:gap-8 flex-wrap">
-
+            <div class="flex items-center justify-end gap-3 md:gap-5 lg:gap-8 flex-wrap">
                     <div>
-                        <img class="max-w-[27px] md:max-w-[39px]" src="images/master-card.webp" alt="">
+                        <img class="max-w-[39px]" src="images/master-card.svg" alt="">
                     </div>
                     <div>
-                        <img class="max-w-[30px] md:max-w-[42px]" src="images/g-pay.webp" alt="">
+                        <img class="max-w-[46px]" src="images/googlePay.svg" alt="">
                     </div>
                     <div>
-                        <img class="max-w-[30px] md:max-w-[42px] opacity-70" src="images/apple-pay-white.png" alt="">
+                        <img class="max-w-[45px]" src="images/visa.svg" alt="">
                     </div>
                     <div>
-                        <img class="max-w-[30px] md:max-w-[42px]" src="images/visa.png" alt="">
-                    </div>
-                    <div>
-                        <img class="max-w-[36px] md:max-w-[54px]" src="images/paypal.png" alt="">
+                        <img class="max-w-[70px]" src="images/paypal.svg" alt="">
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     </footer>
+
+
+    
+
+    <!-- Fuel Virtual card modal -->
+    <el-dialog>
+    <dialog id="fuelVirtualCardModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+        <el-dialog-backdrop class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+        <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-[650px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+            <div class="bg-[#F3F0EE] px-4 lg:px-5 py-5 lg:py-6">
+
+                <button class="absolute top-3.5 right-3.5 md:top-5 md:right-5 transform scale-[1.2] border border-gray-300/80 h-6 w-6 rounded-md flex items-center justify-center" type="button" command="close" commandfor="fuelVirtualCardModal">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L4 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 4L12 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
+                    <div class="flex items-center justify-center bg-[#ebeaea] px-3 py-5 md:p-3 rounded-lg">
+                        <div class="aspect-ratio">
+                            <img class="rounded-md" alt="" src="images/fuel-card.png">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="font-light">Your product is selected</div>
+                            <div class="text-xs text-muted-foreground">Confirm and continue with configuration</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Product</div>
+                            <div class="font-light">Virtual card</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Acceptance</div>
+                            <div class="font-light">Accepted at 3,500 fuel stations throughout the EU</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Price</div>
+                            <div class="font-light">0 € per month</div>
+                        </div> 
+                        <a href="cart.html" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[&gt;svg]:px-4 mt-4 cursor-pointer"
+                            type="button">Select card<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide-icon lucide lucide-chevron-right size-5 ml-2">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </el-dialog-panel>
+        </div>
+    </dialog>
+    </el-dialog>
+    <!-- Fuel Virtual card modal -->
+
+    <!-- Fuel physical card modal -->
+    <el-dialog>
+    <dialog id="fuelPhysicalCardModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+        <el-dialog-backdrop class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+        <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-[650px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+            <div class="bg-[#F3F0EE] px-4 lg:px-5 py-5 lg:py-6">
+
+                <button class="absolute top-3.5 right-3.5 md:top-5 md:right-5 transform scale-[1.2] border border-gray-300/80 h-6 w-6 rounded-md flex items-center justify-center" type="button" command="close" commandfor="fuelPhysicalCardModal">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L4 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 4L12 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
+                    <div class="flex items-center justify-center bg-[#ebeaea] px-3 py-5 md:p-3 rounded-lg">
+                        <div class="aspect-ratio">
+                            <img class="rounded-md" alt="" src="images/fuel-card.png">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="font-light">Your product is selected</div>
+                            <div class="text-xs text-muted-foreground">Confirm and continue with configuration</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Product</div>
+                            <div class="font-light">Physical card</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Acceptance</div>
+                            <div class="font-light">Accepted at 3,500 fuel stations throughout the EU</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Price</div>
+                            <div class="font-light">0 € per month</div>
+                        </div> 
+                        <a href="cart-w-login.html"
+                            class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[&gt;svg]:px-4 mt-4 cursor-pointer"
+                            type="button">Select card<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide-icon lucide lucide-chevron-right size-5 ml-2">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </el-dialog-panel>
+        </div>
+    </dialog>
+    </el-dialog>
+    <!-- Fuel physical card modal -->
+
+
+    <!-- Charging Virtual card modal -->
+    <el-dialog>
+    <dialog id="chargingVirtualCardModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+        <el-dialog-backdrop class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+        <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-[650px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+            <div class="bg-[#F3F0EE] px-4 lg:px-5 py-5 lg:py-6">
+
+                <button class="absolute top-3.5 right-3.5 md:top-5 md:right-5 transform scale-[1.2] border border-gray-300/80 h-6 w-6 rounded-md flex items-center justify-center" type="button" command="close" commandfor="chargingVirtualCardModal">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L4 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 4L12 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
+                    <div class="flex items-center justify-center bg-[#ebeaea] px-3 py-5 md:p-3 rounded-lg">
+                        <div class="aspect-ratio">
+                            <img class="rounded-md" alt="" src="images/charging-card.png">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="font-light">Your product is selected</div>
+                            <div class="text-xs text-muted-foreground">Confirm and continue with configuration</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Product</div>
+                            <div class="font-light">Virtual card</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Acceptance</div>
+                            <div class="font-light">Accepted at 3,500 fuel stations throughout the EU</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Price</div>
+                            <div class="font-light">0 € per month</div>
+                        </div> 
+                        <button type="button"
+                            class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[&gt;svg]:px-4 mt-4 cursor-pointer"
+                            type="button">Select card<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide-icon lucide lucide-chevron-right size-5 ml-2">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </el-dialog-panel>
+        </div>
+    </dialog>
+    </el-dialog>
+    <!-- Charging Virtual card modal -->
+
+    <!-- Charging physical card modal -->
+    <el-dialog>
+    <dialog id="chargingPhysicalCardModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+        <el-dialog-backdrop class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+        <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-[650px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+            <div class="bg-[#F3F0EE] px-4 lg:px-5 py-5 lg:py-6">
+
+                <button class="absolute top-3.5 right-3.5 md:top-5 md:right-5 transform scale-[1.2] border border-gray-300/80 h-6 w-6 rounded-md flex items-center justify-center" type="button" command="close" commandfor="chargingPhysicalCardModal">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L4 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 4L12 12" stroke="#545151" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
+                    <div class="flex items-center justify-center bg-[#ebeaea] px-3 py-5 md:p-3 rounded-lg">
+                        <div class="aspect-ratio">
+                            <img class="rounded-md" alt="" src="images/charging-card.png">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="font-light">Your product is selected</div>
+                            <div class="text-xs text-muted-foreground">Confirm and continue with configuration</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Product</div>
+                            <div class="font-light">Physical card</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Acceptance</div>
+                            <div class="font-light">Accepted at 3,500 fuel stations throughout the EU</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">Price</div>
+                            <div class="font-light">0 € per month</div>
+                        </div> 
+                        <button type="button"
+                            class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[&gt;svg]:px-4 mt-4 cursor-pointer"
+                            type="button">Select card<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide-icon lucide lucide-chevron-right size-5 ml-2">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </el-dialog-panel>
+        </div>
+    </dialog>
+    </el-dialog>
+    <!-- Charging physical card modal -->
+
+
+
 
     <!-- Tailwind scrip -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
@@ -1073,50 +1296,6 @@
         style="opacity: 1; display: flex;">
         <img class="absolute left-1/2 top-1/2 transform -translate-1/2" src="images/scrolltop-arrow.svg" alt="">
     </a>
-
-
-    <script>
-
-    // FAQ js code 
-        tailwind.config={theme:{extend:{fontFamily:{grotesk:['Space Grotesk','sans-serif']},colors:{primary:'#87C332','primary-dark':'#0f1f00','primary-hover':'#9ed93a'},maxWidth:{'8xl':'88rem'}}}}
-
-        function toggleFaq(btn){
-            const item = btn.closest('.faq-item');
-            const body = item.querySelector('.faq-body');
-            const chevron = item.querySelector('.faq-chevron');
-            const num = item.querySelector('.faq-num');
-            const isOpen = item.classList.contains('open');
-
-            document.querySelectorAll('.faq-item').forEach(el=>{
-                el.classList.remove('open');
-                const b = el.querySelector('.faq-body');
-                b.style.maxHeight = null;
-
-                el.querySelector('.faq-chevron').style.transform='';
-                el.querySelector('.faq-chevron').style.background='#f3f3f3';
-                el.querySelector('.faq-chevron svg').style.stroke='#666';
-                el.querySelector('.faq-num').style.background='#f0f9e0';
-                el.querySelector('.faq-num').style.color='#3b6d11';
-                el.style.borderColor='rgba(0,0,0,0.07)';
-            });
-
-            if(!isOpen){
-                item.classList.add('open');
-
-                // 🔥 Smooth height animation
-                body.style.maxHeight = body.scrollHeight + "px";
-
-                chevron.style.transform='rotate(180deg)';
-                chevron.style.background='#87C332';
-                chevron.querySelector('svg').style.stroke='#0f1f00';
-                num.style.background='#87C332';
-                num.style.color='#0f1f00';
-                item.style.borderColor='rgba(135,195,50,0.4)';
-            }
-        }
-
-    </script>
-
 
 </body>
 

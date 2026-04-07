@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Cart - CO2befreit.de</title>
+    <!-- Fav Icon -->
+    <link rel="icon" href="images/favicon.svg">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- link of aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- tailwind css file -->
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="text-sm md:text-[16px] text-[#1E1E1C] font-montserrat bg-[#F3F0EE]">
+
+    <!-- nav area -->
+    <nav class="header-nav-wrap  flex justify-center">
+        <div class="header-nav fixed w-full z-[999] top-3.5 sm:top-4.5 md:top-5 xl:top-6.5">
+            <div class="container w-full">
+                <div
+                    class="nav-inner bg-white rounded-md shadow-[0px 20px 30px -30px #3B3A374D] px-4 md:px-5 xl:px-8 xxl:px-9 py-2.5 lg:py-4 xl:py-5">
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-5 lg:col-span-2 xl:col-span-2">
+                            <div>
+                                <a href="index.html">
+                                    <img class="max-w-[80px] md:max-w-[140px] xl:max-w-[160px]" src="images/logo.svg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-span-8 xl:col-span-7 hidden lg:block">
+                            <div class="main-menu">
+                                <ul class="flex items-center gap-5 lg:gap-5 xl:gap-5 xxl:gap-10 py-3 md:py-5 lg:py-0">
+
+                                    <li>
+                                        <a class="font-semibold text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="/">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="font-medium text- transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="about.html">About us</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-primary transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="product.html">Products</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="#">CO₂ study</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="#">CO₂ measurement</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300  hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-7 lg:col-span-2 xl:col-span-3">
+
+                            <div class="flex items-center justify-end gap-2 lg:gap-2.5 font-montserrat">
+
+                                <!-- Language -->
+                                <div
+                                    class="relative md:after:content-[''] after:absolute after:w-[1px] after:h-[70%] after:top-1/2 after:-translate-y-1/2 after:left-[100%] after:bg-black/10 mr-2">
+
+                                    <button id="langBtn"
+                                        class="flex items-center gap-[4px] bg-transparent border-0 cursor-pointer px-[10px] py-[8px] rounded-[8px] text-[#222] text-[13px] font-medium hover:bg-primary/14 transition">
+
+                                        <!-- Globe Icon -->
+                                        <svg class="w-[16px] h-[16px] stroke-[#555]" viewBox="0 0 24 24" fill="none"
+                                            stroke-width="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                            <path d="M2 12h20" />
+                                        </svg>
+
+                                        <span id="selectedLang"
+                                            class="lg:hidden xl:block text-[13px] xl:text-sm">ENG</span>
+
+                                        <!-- Chevron -->
+                                        <svg class="w-[14px] h-[14px] stroke-[#888] -ml-[2px]" viewBox="0 0 24 24"
+                                            fill="none" stroke-width="2.5">
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </button>
+
+                                    <!-- Dropdown -->
+                                    <div id="langMenu"
+                                        class="absolute right-0 mt-3 sm:mt-5 w-[120px] bg-white border border-primary/22 rounded-[8px] shadow-md opacity-0 invisible transition-all duration-150 p-1.5">
+
+                                        <button data-lang="ENG"
+                                            class="lang-item w-full text-left px-2.5 py-1.5 text-[13px] xl:text-sm hover:bg-primary/14 flex items-center gap-2 rounded-md mb-0.5">
+                                            <span
+                                                class="w-[18px] h-[18px] rounded-full overflow-hidden border border-black/10"></span>
+                                            English
+                                        </button>
+
+                                        <button data-lang="DEU"
+                                            class="lang-item w-full text-left px-2.5 py-1.5 text-[13px] xl:text-sm hover:bg-primary/14 flex items-center gap-2 rounded-md">
+                                            <span
+                                                class="w-[18px] h-[18px] rounded-full overflow-hidden border border-black/10"></span>
+                                            Deutsch
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                                <!-- Login -->
+                                <a href="#"
+                                    class="hidden sm:flex items-center gap-[6px] bg-primary/14 border-1 border-primary/22 rounded-[9px] px-[16px] py-[8px] text-[#222] text-[13px] xl:text-sm font-semibold hover:bg-primary/25 hover:border-primary/28 transition whitespace-nowrap">
+                                    Log in
+                                </a>
+
+                                <!-- Register -->
+                                <a href="#"
+                                    class="hidden sm:flex items-center gap-[6px] bg-primary text-[#0f1f00] text-[13px] xl:text-sm font-bold px-[18px] py-[9px] rounded-[9px] shadow-[0_1px_3px_rgba(135,195,50,0.25)] hover:bg-[#9ed93a] active:scale-95 transition whitespace-nowrap">
+                                    Register
+                                    <svg class="lg:hidden xl:block w-[15px] h-[15px] stroke-[#0f1f00]"
+                                        viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </a>
+
+                                <button command="show-modal" commandfor="drawer"
+                                    class="lg:hidden cursor-pointer sm:ml-2">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 12H21" stroke="#1E1E1C" stroke-width="1.8" stroke-linecap="round">
+                                        </path>
+                                        <path d="M3 7H21" stroke="#1E1E1C" stroke-width="1.8" stroke-linecap="round">
+                                        </path>
+                                        <path d="M3 17H21" stroke="#1E1E1C" stroke-width="1.8" stroke-linecap="round">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- sidebar area -->
+    <el-dialog>
+        <dialog id="drawer" aria-labelledby="drawer-title"
+            class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+            <el-dialog-backdrop
+                class="absolute inset-0 bg-[#010b13a8] backdrop-blur-[5px] transition-opacity duration-400 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+
+            <div tabindex="0" class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+                <el-dialog-panel class="group/dialog-panel relative ml-auto block h-full w-full max-w-[300px]
+                transform transition duration-500 ease-in-out
+                data-closed:translate-x-full sm:duration-700">
+                    <!-- Close button, show/hide based on slide-over state. -->
+                    <div
+                        class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 duration-400 ease-in-out group-data-closed/dialog-panel:opacity-0 sm:-ml-10 sm:pr-4">
+                        <button type="button" command="close" commandfor="drawer"
+                            class="relative rounded-md text-gray-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 cursor-pointer">
+                            <span class="absolute -inset-2.5"></span>
+                            <span class="sr-only">Close panel</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div
+                        class="relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-white/10 rounded-bl-xl rounded-tl-xl">
+
+                        <div class="px-4 sm:px-6 flex items-center justify-between">
+                            <h2 id="drawer-title" class="text-base font-semibold text-primary">Menu</h2>
+                            <div>
+                                <a href="#">
+                                    <img class="max-w-[90px]" src="images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-6 flex-1 px-4 sm:px-6">
+
+                            <div class="lg:hidden border-t border-slate-200">
+
+                                <div class="border-b border-slate-200">
+                                    <a href="#" class="block py-3 font-medium text-[#1E1E1C]">Home</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="#" class="block py-3 font-medium text-[#1E1E1C]">About us</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="#" class="block py-3 font-medium text-[#1E1E1C]">Products</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="#" class="block py-3 font-medium text-[#1E1E1C]">CO₂ study</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="#" class="block py-3 font-medium text-[#1E1E1C]">CO₂ measurement</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="#" class="block py-3 font-medium text-[#1E1E1C]">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sm:hidden mt-auto px-4 flex flex-col gap-3">
+                            <!-- Login -->
+                            <a href="#"
+                                class="flex items-center gap-[6px] bg-primary/14 border-1 border-primary/22 rounded-[9px] px-[16px] py-[8px] text-[#222] text-[13px] xl:text-sm font-semibold hover:bg-primary/25 hover:border-primary/28 transition whitespace-nowrap justify-center w-full">
+                                Log in
+                            </a>
+
+                            <!-- Register -->
+                            <a href="#"
+                                class="flex items-center gap-[6px] bg-primary text-[#0f1f00] text-[13px] xl:text-sm font-bold px-[18px] py-[9px] rounded-[9px] shadow-[0_1px_3px_rgba(135,195,50,0.25)] hover:bg-[#9ed93a] active:scale-95 transition whitespace-nowrap w-full justify-center">
+                                Register
+                                <svg class="lg:hidden xl:block w-[15px] h-[15px] stroke-[#0f1f00]" viewBox="0 0 24 24"
+                                    fill="none" stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+    <!-- sidebar area -->
+
+
+    <div class="pt-18 md:pt-[120px] lg:pt-[140px] px-4">
+
+        <!-- ── STEPPER ── -->
+        <section class="px-1 xl:px-0 pt-10 pb-7 lg:pb-10">
+            <div class="max-w-[650px] lg:max-w-[800px] xl:max-w-[1040px] mx-auto px-4 mb-3 md:mb-5 lg:mb-2">
+                <div class="flex items-center px-4 md:px-0">
+
+                    <!-- Step 1 -->
+                    <div class="flex items-center relative flex-shrink-0">
+                        <div id="sc1"
+                            class="step-circle h-6.5 w-6.5 md:h-8 md:w-8 lg:w-11 lg:h-11 rounded-full flex items-center justify-center bg-primary text-white font-semibold text-xs md:text-base shadow-md transition-all">
+                            1</div>
+                        <div class="absolute top-0 text-center w-32 mt-9 ml-[-50px] md:mt-[52px] md:ml-[-42px]">
+                            <span id="sl1" class="text-xs font-semibold text-primary">Configurator</span>
+                        </div>
+                    </div>
+                    <div id="cn1" class="flex-auto border-t-2 border-primary mx-1 connector"></div>
+
+            
+                    <!-- Step 3 -->
+                    <div class="flex items-center relative flex-shrink-0">
+                        <div id="sc2"
+                            class="step-circle h-6.5 w-6.5 md:h-8 md:w-8 lg:w-11 lg:h-11 rounded-full flex items-center justify-center font-semibold text-xs md:text-base border transition-all"
+                            style="background:#E9DFD8;color:#6b7280;border-color:#d4c9c0;">2</div>
+                        <div class="absolute top-0 text-center w-32 mt-9 ml-[-50px] md:mt-[52px] md:ml-[-42px]">
+                            <span id="sl2" class="text-xs font-medium text-gray-400">Your Data</span>
+                        </div>
+                    </div>
+                    <div id="cn2" class="flex-auto border-t-2 mx-1 connector" style="border-color:#E9DFD8;"></div>
+            
+                    <!-- Step 3 -->
+                    <div class="flex items-center relative flex-shrink-0">
+                        <div id="sc3"
+                            class="step-circle h-6.5 w-6.5 md:h-8 md:w-8 lg:w-11 lg:h-11 rounded-full flex items-center justify-center font-semibold text-xs md:text-base border transition-all"
+                            style="background:#E9DFD8;color:#6b7280;border-color:#d4c9c0;">3</div>
+                        <div class="absolute top-0 text-center w-32 mt-9 ml-[-50px] md:mt-[52px] md:ml-[-42px]">
+                            <span id="sl3" class="text-xs font-medium text-gray-400">Review</span>
+                        </div>
+                    </div>
+                    <div id="cn3" class="flex-auto border-t-2 mx-1 connector" style="border-color:#E9DFD8;"></div>
+
+                    <!-- Step 4 -->
+                    <div class="flex items-center relative flex-shrink-0">
+                        <div id="sc4"
+                            class="step-circle h-6.5 w-6.5 md:h-8 md:w-8 lg:w-11 lg:h-11 rounded-full flex items-center justify-center font-semibold text-xs md:text-base border transition-all"
+                            style="background:#E9DFD8;color:#6b7280;border-color:#d4c9c0;">4</div>
+                        <div class="absolute top-0 text-center w-32 mt-9 ml-[-50px] md:mt-[52px] md:ml-[-42px]">
+                            <span id="sl4" class="text-xs font-medium text-gray-400"><span class="hidden md:inline">Order</span> Confirmation</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── STEP 1: CONFIGURATOR ── -->
+        <div id="panel1" class="step-panel active pb-8 md:pb-12">
+            <div class="max-w-[900px] mx-auto pt-4 pb-2 text-center">
+                <h1 class="text-[22px] sm:text-3xl md:text-4xl font-semibold leading-snug mb-2 text-black/75">Configure
+                    your personal CO₂befreit card</h1>
+                <p class="text-sm md:text-base text-gray-500 mb-3 md:mb-8">Design your card exactly to suit your driving behaviour —
+                    virtual or physical, national or international, with or without add-on packages.</p>
+            </div>
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl text-center font-semibold leading-snug mb-8 text-black/75">With <span
+                        class="text-primary">a few clicks</span> you choose:</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+
+                    <!-- LEFT -->
+                    <div class="lg:col-span-2 space-y-4">
+
+                        <!-- Card image + basic fields -->
+                        <div class="bg-white rounded-2xl border shadow-sm p-5 md:p-7"
+                            style="border-color:rgba(0,0,0,0.07);">
+                            <div class="grid grid-cols-12 gap-6 items-center md:items-start">
+                                <div class="col-span-12 md:col-span-4 rounded-2xl p-4 border border-gray-100">
+                                    <img src="images/fuel-card.png" alt="">
+                                </div>
+                                <div class="col-span-12 md:col-span-8 space-y-5 w-full">
+                                    <div class="space-y-1.5">
+                                        <label class="block text-sm font-semibold text-gray-700">License Region</label>
+                                        <div class="relative">
+                                            <select
+                                                class="w-full h-10 rounded-lg border border-gray-200 bg-white px-3 pr-8 text-sm text-gray-700 appearance-none cursor-pointer"
+                                                style="outline:none;">
+                                                <option>DE</option>
+                                            </select>
+                                            <svg class="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="m6 9 6 6 6-6" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-1.5">
+                                        <label class="block text-sm font-semibold text-gray-700">Plate Number</label>
+                                        <input type="text" placeholder="ABC 1234"
+                                            class="w-full h-10 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 placeholder-gray-400">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package + one-time fee -->
+                        <div class="bg-white rounded-2xl border shadow-sm p-5 md:p-6"
+                            style="border-color:rgba(0,0,0,0.07);">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                                <!-- Package -->
+                                <div>
+                                    <h3 class="text-base font-semibold text-gray-800 mb-1">Fuel Card Configuration</h3>
+                                    <p class="text-sm text-gray-400 mb-4">Select your main card package</p>
+                                    <div class="space-y-3" id="packageGroup">
+
+                                        <label
+                                            class="option-radio selected flex items-center p-3 rounded-xl border cursor-pointer transition-all border-gray-200"
+                                            data-group="package" data-value="standard" data-price="4.99"
+                                            data-label="Standard Package">
+                                            <div class="opacity-0 w-2 h-2 rounded-full border-2 border-primary flex items-center justify-center flex-shrink-0">
+                                                <div class="radio-dot w-2 h-2 rounded-full bg-primary"></div>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-medium text-gray-800">Standard Package</div>
+                                                <div class="text-xs text-gray-400">60 litres / month</div>
+                                            </div>
+                                          
+                                                <span
+                                                class="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">€4.99/mo</span>
+                                        </label>
+
+                                        <label class="option-radio flex items-center p-3 rounded-xl border border-gray-200 bg-white cursor-pointer transition-all"
+                                            data-group="package" data-value="commuter" data-price="19.99"
+                                            data-label="Commuter Package">
+                                            <div
+                                                class="opacity-0 w-2 h-2 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
+                                                <div class="radio-dot w-2 h-2 rounded-full bg-primary"></div>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-medium text-gray-800">Commuter Package</div>
+                                                <div class="text-xs text-gray-400">150 litres / month</div>
+                                            </div>
+                                            <span
+                                                class="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">€19.99/mo</span>
+                                        </label>
+
+                                        <label
+                                            class="option-radio flex items-center p-3 rounded-xl border border-gray-200 bg-white cursor-pointer transition-all"
+                                            data-group="package" data-value="frequent" data-price="29.99"
+                                            data-label="Frequent Driver Package">
+                                            <div
+                                                class="opacity-0 w-2 h-2 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
+                                                <div class="radio-dot w-2 h-2 rounded-full bg-primary"></div>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-medium text-gray-800">Frequent Driver Package
+                                                </div>
+                                                <div class="text-xs text-gray-400">300 litres / month</div>
+                                            </div>
+                                            <span
+                                                class="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">€29.99/mo</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <!-- One-time fee -->
+                                <div>
+                                    <h3 class="text-base font-semibold text-gray-800 mb-1">One-time Fee</h3>
+                                    <p class="text-sm mb-4 cursor-pointer"
+                                        style="color:#87C332; text-decoration:underline;">For new users: 6 months free
+                                        fuelling</p>
+                                    <div class="space-y-3" id="feeGroup">
+
+                                        <label
+                                            class="option-radio flex items-center p-3 rounded-xl border border-gray-200 bg-white cursor-pointer transition-all"
+                                            data-group="fee" data-value="6mo" data-price="5.99"
+                                            data-label="6 Month's Free">
+                                            <div
+                                                class="opacity-0 w-2 h-2 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
+                                                <div class="radio-dot w-2 h-2 rounded-full bg-primary"></div>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-medium text-gray-800">6 Month's Free</div>
+                                                <div class="text-xs text-gray-400">One-time activation</div>
+                                            </div>
+                                            <span
+                                                class="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">€5.99</span>
+                                        </label>
+
+                                        <label
+                                            class="option-radio selected flex items-center p-3 rounded-xl border border-gray-200 cursor-pointer transition-all"
+                                            data-group="fee" data-value="8mo" data-price="7.99"
+                                            data-label="6 + 2 Month's Free">
+                                            <div
+                                                class="opacity-0 w-2 h-2 rounded-full border-2 border-primary flex items-center justify-center flex-shrink-0">
+                                                <div class="radio-dot w-2 h-2 rounded-full bg-primary"></div>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-medium text-gray-800">6 + 2 Month's Free</div>
+                                                <div class="text-xs text-gray-400">Best value offer</div>
+                                            </div>
+                                          
+                                                <span
+                                                class="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">€7.99</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Add-ons -->
+                        <div class="bg-white rounded-2xl border shadow-sm p-5 md:p-6"
+                            style="border-color:rgba(0,0,0,0.07);">
+                            <h3 class="text-base font-semibold text-gray-800 mb-4">Optional Add-ons</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+                                <label
+                                    class="option-check selected flex items-center p-3 rounded-xl border border-gray-200 cursor-pointer transition-all"
+                                    data-price="1.99" data-label="National Usage">
+                                    <div class="check-icon opacity-0 w-2 h-2 rounded border-2 border-primary bg-primary items-center justify-center flex-shrink-0"
+                                        style="border-radius:4px;">
+                                        <svg class="opacity-0 w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="3">
+                                            <path d="M20 6 9 17l-5-5" />
+                                        </svg>
+                                    </div>
+                                    <div class="check-empty opacity-0 rounded border-4 border-gray-300 flex-shrink-0"
+                                        style="border-radius:4px; display:none;"></div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-sm font-medium text-gray-800">National Usage</div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-primary px-2 py-0.5 rounded-full shrink-0"
+                                        style="background:rgba(135,195,50,0.1);">€1.99</span>
+                                </label>
+
+                                <label
+                                    class="option-check selected flex items-center p-3 rounded-xl border border-gray-200 cursor-pointer transition-all"
+                                    data-price="2.99" data-label="International Usage">
+                                    <div class="check-icon opacity-0 w-2 h-2 rounded border-2 border-primary bg-primary items-center justify-center flex-shrink-0"
+                                        style="border-radius:4px;">
+                                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="3">
+                                            <path d="M20 6 9 17l-5-5" />
+                                        </svg>
+                                    </div>
+                                    <div class="check-empty opacity-0 rounded border-4 border-gray-300 flex-shrink-0"
+                                        style="border-radius:4px; display:none;"></div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-sm font-medium text-gray-800">International Usage</div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-primary px-2 py-0.5 rounded-full shrink-0"
+                                        style="background:rgba(135,195,50,0.1);">€2.99</span>
+                                </label>
+
+                                <label
+                                    class="option-check flex items-center p-3 rounded-xl border border-gray-200 bg-white cursor-pointer transition-all"
+                                    data-price="2.99" data-label="Continue Card After Study">
+                                    <div class="check-icon opacity-0 w-2 h-2 rounded border-2 border-primary bg-primary items-center justify-center flex-shrink-0"
+                                        style="border-radius:4px; display:none;">
+                                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="3">
+                                            <path d="M20 6 9 17l-5-5" />
+                                        </svg>
+                                    </div>
+                                    <div class="check-empty opacity-0 rounded border-4 border-gray-300 flex-shrink-0"
+                                        style="border-radius:4px;"></div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-sm font-medium text-gray-800">Continue Card Use After Study
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full shrink-0">€2.99</span>
+                                </label>
+
+                                <label
+                                    class="option-check selected flex items-center p-3 rounded-xl border border-gray-200 cursor-pointer transition-all"
+                                    data-price="5.99" data-label="Car Wash Package">
+                                    <div class="check-icon opacity-0 w-2 h-2 rounded border-2 border-primary bg-primary items-center justify-center flex-shrink-0"
+                                        style="border-radius:4px;">
+                                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="3">
+                                            <path d="M20 6 9 17l-5-5" />
+                                        </svg>
+                                    </div>
+                                    <div class="check-empty opacity-0 rounded border-4 border-gray-300 flex-shrink-0"
+                                        style="border-radius:4px; display:none;"></div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-sm font-medium text-gray-800">Car Wash Package</div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-primary px-2 py-0.5 rounded-full shrink-0"
+                                        style="background:rgba(135,195,50,0.1);">€5.99</span>
+                                </label>
+
+                                <label
+                                    class="option-check selected flex items-center p-3 rounded-xl border border-gray-200 cursor-pointer transition-all sm:col-span-2 md:col-span-1"
+                                    data-price="10.99" data-label="ACE Mobility Package">
+                                    <div class="check-icon opacity-0 w-2 h-2 rounded border-2 border-primary bg-primary items-center justify-center flex-shrink-0"
+                                        style="border-radius:4px;">
+                                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="3">
+                                            <path d="M20 6 9 17l-5-5" />
+                                        </svg>
+                                    </div>
+                                    <div class="check-empty opacity-0 rounded border-4 border-gray-300 flex-shrink-0"
+                                        style="border-radius:4px; display:none;"></div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-sm font-medium text-gray-800">ACE Mobility Package</div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-primary px-2 py-0.5 rounded-full shrink-0"
+                                        style="background:rgba(135,195,50,0.1);">€10.99</span>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <!-- Privacy -->
+                        <div class="rounded-2xl border border-gray-200 px-5 py-4 bg-[#f9fafb]">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                We collect the personal data provided in the form above for the purpose of improving our
+                                services, including responding to your enquiry. By completing the form you agree to our
+                                privacy policy:
+                                <a href="#" class="text-primary underline ml-1" style="color:#87C332;">Learn more</a>
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT summary -->
+                    <div class="lg:col-span-1 sticky top-6">
+                        <div class="bg-white rounded-2xl border shadow-sm p-5 sticky top-6"
+                            style="border-color:rgba(0,0,0,0.07);">
+
+                            <div class="rounded-xl p-3.5 mb-4"
+                                style="background:rgba(135,195,50,0.07);border:1px solid rgba(135,195,50,0.2);">
+                                <div class="text-base font-semibold text-primary mb-0.5">Physical Card</div>
+                                <div class="text-xs md:text-[13px] text-gray-500">Virtual card with fuel (€9.99 + €0.00 deposit)</div>
+                            </div>
+
+                            <div class="text-base font-semibold text-primary mb-3">Summary</div>
+
+                            <div class="space-y-2.5 text-sm" id="summaryLines">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-700 font-medium">Normal Card - KWH</span>
+                                    <span class="font-semibold text-gray-800">€9.99</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500">Refundable Deposit</span>
+                                    <span class="text-gray-500">€0.00</span>
+                                </div>
+                                <div class="flex justify-between items-center" id="line-package">
+                                    <span class="text-gray-500">Standard Package</span>
+                                    <span class="text-gray-500">€4.99</span>
+                                </div>
+                                <div class="flex justify-between items-center" id="line-fee">
+                                    <span class="text-gray-500">6 + 2 Month's Free</span>
+                                    <span class="text-gray-500">€7.99</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-gray-100">
+                                    <span class="text-gray-500">Shipping</span>
+                                    <span class="font-medium" style="color:#87C332;">Free Shipping</span>
+                                </div>
+                                <div id="addon-lines"></div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-4 mb-5">
+                                <span class="text-xl font-bold text-gray-900">Total</span>
+                                <span class="text-xl font-bold text-gray-900" id="totalAmount">€44.93</span>
+                            </div>
+
+                            <button onclick="goToStep(2)"
+                                class="w-full inline-flex items-center justify-center gap-2 font-semibold text-sm rounded-xl h-11 px-6 transition-colors cursor-pointer shadow-sm text-white"
+                                style="background:#87C332;">
+                                Next
+                                <svg class="w-4 h-4 pt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 2: REVIEW ── -->
+        <div id="panel2" class="step-panel pb-9 md:pb-12">
+            <div class="max-w-7xl mx-auto py-3 md:py-6">
+                <div class="max-w-[980px] mx-auto">
+                    <h1 class="text-center text-[22px] sm:text-3xl font-semibold mb-2 text-black/75">Enter your data – quickly & securely</h1>
+                     <p class="text-center text-gray-500 text-sm md:text-base mb-5 md:mb-8">In order to create your CO₂-free card and activate it for the study, we need some personal information. Entering this information only takes a few minutes and is, of course, GDPR-compliant and encrypted.</p>
+                </div>
+                <div class="md:bg-white rounded-2xl md:shadow-sm md:p-6 md:border border-[#00000012]">
+                    <div class="rounded-xl p-4 mb-5 md:mb-6"
+                        style="background:rgba(135,195,50,0.07);border:1px solid rgba(135,195,50,0.2);">
+                        <div class="text-base font-semibold text-primary mb-1">Physical Card — CO₂befreit</div>
+                        <div class="text-sm text-gray-500">Vehicles with fuel · Free Shipping</div>
+                    </div>
+
+                    <!-- LEFT — form card -->
+                    <div class="md:col-span-2 space-y-5">
+
+                        <!-- Contact card -->
+                        <div class="bg-white rounded-2xl border shadow-sm px-4 p-5 md:p-8" style="border-color:rgba(0,0,0,0.07);">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">Contact Person</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                            <!-- Salutation -->
+                            <div class="space-y-1.5">
+                            <label class="block text-sm font-semibold text-gray-700">Salutation <span class="text-red-400">*</span></label>
+                            <div class="relative select-wrap">
+                                <select id="f-salutation" class="w-full h-10 rounded-lg border border-gray-200 bg-white px-3 pr-9 text-sm text-gray-700">
+                                <option value="">Select…</option>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Mx.">Mx.</option>
+                                </select>
+                                <svg class="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                            </div>
+                            </div>
+
+                            <!-- Last name -->
+                            <div class="space-y-1.5">
+                            <label class="block text-sm font-semibold text-gray-700">Last Name <span class="text-red-400">*</span></label>
+                            <input id="f-last" type="text" placeholder="Enter last name" class="w-full h-10 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 placeholder-gray-400">
+                            </div>
+
+                            <!-- First name -->
+                            <div class="space-y-1.5">
+                            <label class="block text-sm font-semibold text-gray-700">First Name <span class="text-red-400">*</span></label>
+                            <input id="f-first" type="text" placeholder="Enter first name" class="w-full h-10 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 placeholder-gray-400">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="space-y-1.5">
+                            <label class="block text-sm font-semibold text-gray-700">Phone Number <span class="text-red-400">*</span></label>
+                            <input id="f-phone" type="tel" placeholder="e.g. +49 123 456 789" class="w-full h-10 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 placeholder-gray-400">
+                            </div>
+
+                            <!-- Email — full width -->
+                            <div class="space-y-1.5 md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700">Email Address <span class="text-red-400">*</span></label>
+                            <div class="flex h-10 rounded-lg border border-gray-200 overflow-hidden" style="background:#fff;">
+                                <input id="f-email" type="email" placeholder="name@co2befreit.de" class="flex-1 px-3 text-sm text-gray-700 placeholder-gray-400 border-none" style="outline:none; background:transparent;">
+                                <div class="flex items-center px-3" style="background:#87C332;">
+                                <span class="text-white text-xs font-bold tracking-wide">Verified</span>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                        </div>
+
+                        <!-- Privacy notice -->
+                        <div class="rounded-2xl border border-gray-200 px-5 py-4" style="background:#f9fafb;">
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            We collect the personal data provided in the form above to improve our services, including responding to your enquiry. By completing the form you agree to our privacy policy:
+                            <a href="#" style="color:#87C332;" class="underline ml-1">Learn more</a>
+                        </p>
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-3 pt-4 lg:pt-7 justify-end max-w-[400px] ml-auto">
+                        <button onclick="goToStep(1)" class="flex-1 h-11 rounded-xl border border-gray-200 text-sm font-semibold text-gray-600 cursor-pointer transition-colors hover:bg-gray-50">←
+                            Back</button>
+                        <button onclick="goToStep(3)" class="flex-1 h-11 rounded-xl text-sm font-semibold text-white cursor-pointer shadow-sm transition-colors bg-primary">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 3: REVIEW ── -->
+        <div id="panel3" class="step-panel pb-8 md:pb-12">
+            <div class="max-w-7xl mx-auto py-3 md:py-6">
+                <div class="max-w-[980px] mx-auto text-center">
+                    <h1 class="text-[22px] sm:text-3xl font-semibold mb-2 text-black/75">Please check your information.</h1>
+                    <p class="text-gray-500 text-sm md:text-base mb-5 md:mb-8">To create your CO₂-free card and activate it for the study, we need some personal information. Entering this information only takes a few minutes and is, of course, GDPR-compliant and encrypted.</p>
+                </div>
+                <div class="md:bg-white rounded-2xl md:shadow-sm md:p-6 md:border border-[#00000012]">
+                    <div class="rounded-xl p-4 mb-5 md:mb-6"
+                        style="background:rgba(135,195,50,0.07);border:1px solid rgba(135,195,50,0.2);">
+                        <div class="text-base font-semibold text-primary mb-1">Physical Card — CO₂befreit</div>
+                        <div class="text-sm text-gray-500">Vehicles with fuel · Free Shipping</div>
+                    </div>
+
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+
+                        <!-- LEFT -->
+                        <div class="lg:col-span-2 space-y-4 md:space-y-5">
+
+                            <!-- Product card -->
+                            <div class="bg-white rounded-2xl border shadow-sm py-5 px-4 md:p-6" style="border-color:rgba(0,0,0,0.07);">
+                            <div class="text-base font-bold text-gray-900 mb-5">Product</div>
+                            <div class="flex gap-5 items-center">
+                                <div>
+                                    <img class="max-w-[140px] rounded-lg" src="images/fuel-card.png" alt="">
+                                </div>
+                                <div>
+                                <p class="font-bold text-gray-900 text-base">Fleet Card</p>
+                                <p class="text-sm text-gray-500 mt-0.5 mb-1.5">Accepted at 3,500+ fuel stations across the EU</p>
+                                <span class="pill pill-green">€41.97 / month</span>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Contact summary -->
+                            <div class="bg-white rounded-2xl border shadow-sm py-5 px-4 md:p-6" style="border-color:rgba(0,0,0,0.07);">
+                            <h3 class="text-base font-bold text-gray-900 mb-5">Contact Person</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                <div class="flex flex-col gap-0.5">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Salutation</span>
+                                <span class="font-semibold text-gray-800" id="rv-sal">Mrs.</span>
+                                </div>
+                                <div class="flex flex-col gap-0.5">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Last Name</span>
+                                <span class="font-semibold text-gray-800" id="rv-last">Mustermann</span>
+                                </div>
+                                <div class="flex flex-col gap-0.5">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">First Name</span>
+                                <span class="font-semibold text-gray-800" id="rv-first">Max</span>
+                                </div>
+                                <div class="flex flex-col gap-0.5">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Phone</span>
+                                <span class="font-semibold text-gray-800" id="rv-phone">+49 123 456 789</span>
+                                </div>
+                                <div class="flex flex-col gap-0.5 sm:col-span-2">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Email</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-semibold text-gray-800" id="rv-email">name@co2befreit.de</span>
+                                    <span class="verified-badge">Verified</span>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Agreements -->
+                            <div class="bg-white rounded-2xl border shadow-sm py-5 px-4 md:p-6" style="border-color:rgba(0,0,0,0.07);">
+                            <h3 class="text-base font-bold text-gray-900 mb-5">Agreements</h3>
+                            <div class="space-y-4">
+
+                                <!-- Agreement 1 -->
+                                <div class="flex items-start gap-3 p-3.5 rounded-xl border border-gray-100 cursor-pointer hover:border-gray-200 transition-colors" onclick="toggleCb('cb1')" id="row-cb1">
+                                <div class="cb-box mt-1" id="cb1">
+                                    <svg class="w-3 h-3 text-white hidden" id="cb1-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
+                                </div>
+                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed select-none">
+                                    I confirm that this order is placed exclusively for commercial or self-employed professional purposes pursuant to § 14 BGB. I am not acting as a consumer within the meaning of § 13 BGB. <span class="text-red-400 font-semibold">*</span>
+                                </p>
+                                </div>
+
+                                <!-- Agreement 2 -->
+                                <div class="flex items-start gap-3 p-3.5 rounded-xl border border-gray-100 cursor-pointer hover:border-gray-200 transition-colors" onclick="toggleCb('cb2')" id="row-cb2">
+                                <div class="cb-box mt-0.5" id="cb2">
+                                    <svg class="w-3 h-3 text-white hidden" id="cb2-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
+                                </div>
+                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed select-none">
+                                    I have read the General Terms &amp; Conditions and the Privacy Policy and agree to them. <span class="text-red-400 font-semibold">*</span>
+                                </p>
+                                </div>
+
+                                <!-- Agreement 3 -->
+                                <div class="flex items-start gap-3 p-3.5 rounded-xl border border-gray-100 cursor-pointer hover:border-gray-200 transition-colors" onclick="toggleCb('cb3')" id="row-cb3">
+                                <div class="cb-box mt-0.1" id="cb3">
+                                    <svg class="w-3 h-3 text-white hidden" id="cb3-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
+                                </div>
+                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed select-none">
+                                    I agree to be contacted about offers and promotional campaigns. <span class="text-red-400 font-semibold">*</span>
+                                </p>
+                                </div>
+
+                            </div>
+                           
+                            </div>
+                          
+                        </div>
+
+                        <!-- RIGHT — summary -->
+                        <div class="lg:col-span-1">
+                            <div class="bg-white rounded-2xl border shadow-sm p-5 sticky top-6" style="border-color:rgba(0,0,0,0.07);">
+
+                            <div class="rounded-xl p-3.5 mb-4" style="background:rgba(135,195,50,0.07);border:1px solid rgba(135,195,50,0.2);">
+                                <div class="text-sm font-bold mb-0.5" style="color:#87C332;">Physical Card</div>
+                                <div class="text-xs text-gray-500">Vehicles with fuel · €9.99 + €0.00 deposit</div>
+                            </div>
+
+                            <div class="text-sm font-bold text-gray-900 mb-4">Order Summary</div>
+                            <div class="space-y-2.5 text-sm">
+                                <div class="flex justify-between"><span class="text-gray-700 font-medium">Normal Card - KWH</span><span class="font-semibold text-gray-800">€9.99</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">Refundable Deposit</span><span class="text-gray-500">€0.00</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">Standard Package</span><span class="text-gray-500">€4.99</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">6 + 2 Month's Free</span><span class="text-gray-500">€7.99</span></div>
+                                <div class="flex justify-between pb-3 border-b border-gray-100"><span class="text-gray-500">Shipping</span><span class="font-medium" style="color:#87C332;">Free</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">National Usage</span><span class="text-gray-500">€1.99</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">International Usage</span><span class="text-gray-500">€2.99</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">Car Wash Package</span><span class="text-gray-500">€5.99</span></div>
+                                <div class="flex justify-between pb-3 border-b border-gray-100"><span class="text-gray-500">ACE Mobility Package</span><span class="text-gray-500">€10.99</span></div>
+                            </div>
+                            <div class="flex justify-between items-center mt-4 mb-5">
+                                <span class="text-xl font-bold text-gray-900">Total</span>
+                                <span class="text-xl font-bold text-gray-900">€44.93</span>
+                            </div>
+
+                            <!-- Agreements mini status -->
+                            <div class="space-y-2 mb-5">
+                                <div class="flex items-center gap-2 text-xs text-gray-500">
+                                <div id="dot1" class="w-2 h-2 rounded-full bg-gray-200 flex-shrink-0"></div>
+                                <span>Commercial use agreement</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-gray-500">
+                                <div id="dot2" class="w-2 h-2 rounded-full bg-gray-200 flex-shrink-0"></div>
+                                <span>Terms &amp; Privacy accepted</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-gray-500">
+                                <div id="dot3" class="w-2 h-2 rounded-full bg-gray-200 flex-shrink-0"></div>
+                                <span>Marketing consent</span>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="flex gap-3 pt-4 lg:pt-7 justify-end max-w-[500px] ml-auto">
+                        <button onclick="goToStep(2)" class="px-5.5 md:flex-1 h-11 rounded-xl border border-gray-200 text-sm font-semibold text-gray-600 cursor-pointer transition-colors hover:bg-gray-50">←
+                            Back</button>
+                        <button id="s3-next" onclick="goToStep(4)" class="btn-submit flex-1 h-11 rounded-xl text-sm font-semibold text-white cursor-pointer shadow-sm transition-colors bg-primary" style="background:#87C332; opacity:.45; cursor:not-allowed;">Proceed to Checkout →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 4: CONFIRMATION ── -->
+        <div id="panel4" class="step-panel pb-8 md:pb-12">
+            <div class="max-w-3xl mx-auto py-3 md:py-6">
+                <div class="bg-white rounded-2xl border shadow-sm py-5 px-4.5 md:p-10 text-center"
+                    style="border-color:rgba(0,0,0,0.07);">
+                    <div class="h-10 w-10 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4"
+                        style="background:rgba(135,195,50,0.12);">
+                        <svg class="h-6 w-6 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                    </div>
+                    <h1 class="text-[22px] sm:text-3xl font-bold text-black/ mb-2 md:mb-2">Order Confirmed!</h1>
+                    <p class="text-gray-500 text-sm md:text-base mb-2">Thank you for your order. Your CO₂befreit card is being
+                        prepared.</p>
+                    <div class="rounded-xl p-5 mb-6 text-left bg-[#f9fafb] border border-[#e5e7eb] mt-3 md:mt-5 lg:mt-8">
+
+                        <div class="bg-white p-4 rounded-xl text-center mb-5 lg:mb-6">
+                            <img class="block mx-auto shadow-sm rounded-xl" src="images/fuel-card.png" alt="Fuel Card">
+                        </div>
+
+
+                        <!-- Title -->
+                        <div class="text-[15px] font-semibold text-gray-800 mb-4">
+                            Order Summary
+                        </div>
+
+                        <!-- Items -->
+                        <div class="space-y-2 text-[14px] text-gray-600">
+
+                            <div class="flex justify-between">
+                            <div>
+                                <p class="font-medium text-gray-800">Normal Card - KWH</p>
+                                <p class="text-[12px] text-gray-400">One-time payment</p>
+                            </div>
+                            <span class="text-gray-700">€9.99</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>Security deposit</span>
+                                <span>€0.00</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>Standard Package</span>
+                                <span>€4.99</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>6 + 2 Months Free</span>
+                                <span>€7.99</span>
+                            </div>
+
+                            <!-- Subsection -->
+                            <div class="pt-2 text-gray-500 font-medium">Add-ons</div>
+
+                            <div class="flex justify-between">
+                                <span>National Usage</span>
+                                <span>€1.99</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>International Usage</span>
+                                <span>€2.99</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>Car Wash Package</span>
+                                <span>€5.99</span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span>ACE Mobility Package</span>
+                                <span>€10.99</span>
+                            </div>
+
+                        </div>
+
+                        <!-- Total -->
+                        <div class="flex justify-between items-center pt-4 mt-4 border-t border-gray-200">
+                            <span class="font-semibold text-gray-800">Total Amount</span>
+                            <span class="font-bold text-gray-900 text-[16px]">€44.93</span>
+                        </div>
+
+                    </div>
+                    <a href="https://checkout.stripe.com/c/pay/cs_test_b1WgCQOgFuBX56ZT4BbAxYbDomy0xwHUvk0ZkytZW06PxgUsLYmcqXj41A#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blpxYHZxWjA0VkduMGtCbUA2PG5hTmhdQV9VQDRLZzRxSmBcUTZ%2FcUN1Q0pdalxfY2A0R0hfPTx%2FQmxxbFNjRk5DaEgwVDA0Z2k8X0FWZmg9UFR2dkRGT2h9NmxJZDF3NTVKSDFAUFNyZycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" class="inline-flex items-center gap-2 h-11 px-8 rounded-xl text-sm font-semibold text-white cursor-pointer shadow-sm bg-primary" target="_blank">
+                        Proceed to Payment →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="bg-[#EAEAEA] text-[#3a5a10] font-grotesk">
+        <div class="container pt-9 md:pt-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.6fr] gap-10">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-[10px] mb-4 lg:mb-5.5">
+                        <a href="/">
+                            <img class="max-w-[90px] md:max-w-[100px] xl:max-w-[130px]" src="images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="text-[17px] font-bold text-[#1a2e05] mb-2.5 md:mb-3 leading-snug">Drive. Save. Protect the
+                        climate.</p>
+                    <p class="text-[15.5px] text-[#3a4a2a] leading-[1.7] mb-3.5 md:mb-5 lg:mb-6">With the CO₂befreit
+                        card you drive as usual, save with exclusive benefits and compensate every trip – for real
+                        mobility with responsibility.</p>
+                    <div class="flex gap-2">
+                        <a href="/" aria-label="Instagram"
+                            class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                            <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors"
+                                viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="/" aria-label="Facebook"
+                            class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                            <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors"
+                                viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <div
+                        class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">
+                        Navigation</div>
+                    <ul class="flex flex-col gap-[13px] list-none">
+                        <li><a href="/"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Home</a>
+                        </li>
+                        <li><a href="/about"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">About
+                                us</a></li>
+                        <li><a href="/products"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Products</a>
+                        </li>
+                        <li><a href="/die-co2-studie"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂
+                                study</a></li>
+                        <li><a href="/co2-measure"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂
+                                measurement</a></li>
+                        <li><a href="/contact"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <div
+                        class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">
+                        Legal</div>
+                    <ul class="flex flex-col gap-[13px] list-none">
+                        <li><a href="/impress"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Imprint</a>
+                        </li>
+                        <li><a href="/data"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Privacy
+                                policy (GDPR)</a></li>
+                        <li><a href="/condition"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Terms
+                                of participation</a></li>
+                        <li><a href="/cookie"
+                                class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Cookie
+                                settings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <div
+                        class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">
+                        Contact &amp; Support</div>
+                    <div class="flex items-start gap-[10px] mb-[14px]">
+                        <div
+                            class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                            <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+                            </svg>
+                        </div>
+                        <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                            <strong
+                                class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Email</strong>
+                            <a href="mailto:support@ecofuel-mobility.de"
+                                class="text-[#3a4a2a] no-underline hover:text-primary transition-colors">support@ecofuel-mobility.de</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-[10px] mb-[14px]">
+                        <div
+                            class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                            <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                            </svg>
+                        </div>
+                        <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                            <strong
+                                class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Phone</strong>
+                            +49 (0) XXX - XXX XX XX
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-[10px] mb-[14px]">
+                        <div
+                            class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                            <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                            <strong
+                                class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Address</strong>
+                            EcoFuel Mobility GmbH, Musterstraße 1, 12345 Berlin<br>
+                            <span class="text-[#4a5a3a] text-[13.5px]">Mon–Fri, 9 a.m.–6 p.m.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="mt-3 md:mt-8 lg:mt-12 mx-auto">
+            <div class="container">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-t border-primary/30 py-5 lg:py-6">
+                    <p class="text-[14px] text-[#4a5a3a] leading-[1.6]">© 2025 EcoFuel Mobility GmbH. All rights
+                        reserved.<br>Content is protected by copyright. Reproduction requires written consent.</p>
+
+                    <div class="flex items-center justify-end gap-3 md:gap-5 lg:gap-8 flex-wrap">
+                        <div>
+                            <img class="max-w-[39px]" src="images/master-card.svg" alt="">
+                        </div>
+                        <div>
+                            <img class="max-w-[46px]" src="images/googlePay.svg" alt="">
+                        </div>
+                        <div>
+                            <img class="max-w-[45px]" src="images/visa.svg" alt="">
+                        </div>
+                        <div>
+                            <img class="max-w-[70px]" src="images/paypal.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- sign in sign up modal -->
+    <el-dialog>
+        <dialog id="signInModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+            <el-dialog-backdrop class="fixed inset-0 bg-[#000]/60 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+            <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+            <el-dialog-panel class="relative transform overflow-hidden rounded-lg text-left shadow-xl  outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:w-full sm:max-w-[1000px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                <div>
+
+                    <div class=" fixed inset-0 flex items-center justify-center p-4 z-50">
+
+                        <div class="bg-white rounded-[20px] overflow-hidden grid w-full max-w-[1000px] grid-cols-1 md:grid-cols-2 min-h-[540px] relative">
+
+                            <!-- LEFT -->
+                            <div class="px-9 py-10 flex flex-col justify-center bg-white">
+
+                            <!-- Header -->
+                            <div class="text-center mb-7">
+                                <div class="w-14 h-14 rounded-2xl bg-[#E6F1D7] flex items-center justify-center mx-auto mb-3.5">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b6d11" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                </div>
+                               <h1 class="text-[22px] font-extrabold text-gray-900 tracking-tight leading-tight mb-1.5" id="modalTitle">
+                                Sign in
+                                </h1>
+                                <p class="text-[14px] text-gray-500 leading-relaxed" id="modalSubtitle">
+                                Secure access to fuel management.
+                                </p>
+                            </div>
+
+
+                                <!-- Form -->
+                                <form class="flex flex-col gap-3.5" id="signinForm">
+
+                                    <!-- Email -->
+                                    <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                                    <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                        <div class="px-3 text-gray-400">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                        </div>
+                                        <input required type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none"/>
+                                    </div>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                                    <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                        <div class="px-3 text-gray-400">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                        </div>
+                                        <input required type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                        <button type="button" class="px-3 text-gray-400">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </button>
+                                    </div>
+                                    </div>
+
+                                    <!-- Remember -->
+                                   <div class="flex items-center justify-between">
+  
+                                    <label for="remember1" class="flex items-center gap-2 text-[14px] text-gray-700 font-medium cursor-pointer">
+                                        <input id="remember1" type="checkbox" class="w-4 h-4 accent-[#87C332] cursor-pointer">
+                                        Stay signed in
+                                    </label>
+
+                                    <a href="#" class="text-[14px] text-[#87C332] font-semibold underline">
+                                        Forgot password?
+                                    </a>
+
+                                    </div>
+
+                                    <!-- Button -->
+                                    <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                                    Sign in
+                                    </button>
+
+                                </form>
+
+                                <!-- Sign Up Form (hidden by default) -->
+                                <form class="hidden" id="signupForm">
+
+                                    <div class="flex flex-col gap-3.5">
+                                        <!-- First + Last Name -->
+                                        <div class="grid grid-cols-2 gap-3">
+                                        <div>
+                                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">First Name *</label>
+                                            <input required type="text" placeholder="Max" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition"/>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Last Name *</label>
+                                            <input type="text" placeholder="Mustermann" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition"/>
+                                        </div>
+                                        </div>
+    
+                                        <!-- Email -->
+                                        <div>
+                                        <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                                        <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                            <div class="px-3 text-gray-400">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                            </div>
+                                            <input type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none"/>
+                                        </div>
+                                        </div>
+    
+                                        <!-- Password -->
+                                        <div>
+                                        <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                                        <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                            <div class="px-3 text-gray-400">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                            </div>
+                                            <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                            <button type="button" class="px-3 text-gray-400">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                                            </button>
+                                        </div>
+                                        </div>
+    
+                                        <!-- Confirm Password -->
+                                        <div>
+                                        <label class="block text-[14px] font-semibold text-gray-700 mb-1">Confirm Password *</label>
+                                        <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                            <div class="px-3 text-gray-400">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                            </div>
+                                            <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                        </div>
+                                        </div>
+    
+                                        <!-- Terms -->
+                                        <label class="flex items-start gap-2 text-[13px] text-gray-600 cursor-pointer">
+                                        <input type="checkbox" class="w-4 h-4 mt-0.5 accent-[#87C332] cursor-pointer flex-shrink-0">
+                                        I agree to the <a href="#" class="text-[#87C332] underline mx-1">Terms of Service</a> and <a href="#" class="text-[#87C332] underline ml-1">Privacy Policy</a>
+                                        </label>
+    
+                                        <!-- Button -->
+                                        <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                                        Create Account
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Toggle footer -->
+                                <div class="text-center mt-5 text-[14px] text-gray-400" id="toggleText">
+                                    Don't have an account?
+                                    <a href="#" onclick="switchModal('signup'); return false;" class="text-[#87C332] font-bold underline ml-1">Register now</a>
+                                </div>
+                      
+                            <!-- Footer -->
+                            <div class="text-center mt-5 text-xs text-gray-400">
+                                © 2025 CO₂befreit —
+                                <a href="#" class="underline">Legal notice</a>
+                            </div>
+
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="hidden md:block relative overflow-hidden">
+                                <img src="images/modal-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-85 rounded-tl-2xl rounded-bl-2xl">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+     <!-- sign in sign up modal -->
+
+    <!-- Tailwind scrip -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <!-- link of aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom jQuery -->
+    <script src="js/scripts.js"></script>
+
+    <a href="#"
+        class="scrolltotop fixed shadow-[0_4px_24px_rgba(135,195,50,0.15)] right-[30px] bottom-[25px] hidden w-[38px] h-[38px] rounded-full bg-white items-center justify-center z-[2] transition-all duration-300 animate-top-up"
+        style="opacity: 1; display: flex;">
+        <img class="absolute left-1/2 top-1/2 transform -translate-1/2" src="images/scrolltop-arrow.svg" alt="">
+    </a>
+
+
+    <script>
+
+        let currentStep = 1;
+
+        const STATE = {
+            package: { label: 'Standard Package', price: 4.99 },
+            fee: { label: "6 + 2 Month's Free", price: 7.99 },
+            addons: [
+                { label: 'National Usage', price: 1.99 },
+                { label: 'International Usage', price: 2.99 },
+                { label: 'Car Wash Package', price: 5.99 },
+                { label: 'ACE Mobility Package', price: 10.99 }
+            ]
+        };
+
+        const BASE = 9.99;
+
+        function goToStep(n) {
+            document.getElementById('panel' + currentStep).classList.remove('active');
+            currentStep = n;
+            document.getElementById('panel' + n).classList.add('active');
+            updateStepUI();
+            if (n === 3) buildReview();
+            if (n === 4) buildConfirm();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateStepUI() {
+            for (let i = 1; i <= 4; i++) {
+                const circle = document.getElementById('sc' + i);
+                const label = document.getElementById('sl' + i);
+                const cn = document.getElementById('cn' + i);
+                if (i < currentStep) {
+                    circle.style.background = '#87C332';
+                    circle.style.color = '#fff';
+                    circle.style.borderColor = 'transparent';
+                    circle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+                    label.style.color = '#87C332';
+                    if (cn) cn.style.borderColor = '#87C332';
+                } else if (i === currentStep) {
+                    circle.style.background = '#87C332';
+                    circle.style.color = '#fff';
+                    circle.style.borderColor = 'transparent';
+                    circle.innerHTML = i;
+                    label.style.color = '#87C332';
+                    label.style.fontWeight = '700';
+                    if (cn) cn.style.borderColor = 'rgba(135,195,50,0.3)';
+                } else {
+                    circle.style.background = '#E9DFD8';
+                    circle.style.color = '#6b7280';
+                    circle.style.borderColor = '#d4c9c0';
+                    circle.innerHTML = i;
+                    label.style.color = '#9ca3af';
+                    label.style.fontWeight = '500';
+                    if (cn) cn.style.borderColor = '#E9DFD8';
+                }
+            }
+        }
+
+        function calcTotal() {
+            let t = BASE + STATE.package.price + STATE.fee.price;
+            STATE.addons.forEach(a => t += a.price);
+            return t.toFixed(2);
+        }
+
+        function updateSummary() {
+            document.getElementById('line-package').querySelector('span:first-child').textContent = STATE.package.label;
+            document.getElementById('line-package').querySelector('span:last-child').textContent = '€' + STATE.package.price.toFixed(2);
+            document.getElementById('line-fee').querySelector('span:first-child').textContent = STATE.fee.label;
+            document.getElementById('line-fee').querySelector('span:last-child').textContent = '€' + STATE.fee.price.toFixed(2);
+
+            const addonEl = document.getElementById('addon-lines');
+            addonEl.innerHTML = STATE.addons.map(a =>
+                `<div class="flex justify-between items-center"><span class="text-gray-500">${a.label}</span><span class="text-gray-500">€${a.price.toFixed(2)}</span></div>`
+            ).join('');
+            document.getElementById('totalAmount').textContent = '€' + calcTotal();
+        }
+
+        function buildReview() {
+            const lines = [
+                { label: 'Normal Card - KWH', price: BASE, bold: true },
+                { label: 'Refundable Deposit', price: 0 },
+                { label: STATE.package.label, price: STATE.package.price },
+                { label: STATE.fee.label, price: STATE.fee.price },
+                ...STATE.addons.map(a => ({ label: a.label, price: a.price }))
+            ];
+            document.getElementById('reviewLines').innerHTML = lines.map(l =>
+                `<div class="flex justify-between items-center py-1.5 border-b border-gray-50">
+            <span class="${l.bold ? 'font-semibold text-gray-800' : 'text-gray-500'}">${l.label}</span>
+            <span class="${l.bold ? 'font-semibold text-gray-800' : 'text-gray-500'}">${l.price === 0 ? '€0.00' : '€' + l.price.toFixed(2)}</span>
+            </div>`
+            ).join('');
+            document.getElementById('reviewTotal').textContent = '€' + calcTotal();
+        }
+
+        function buildConfirm() {
+            const lines = [
+                { label: 'Normal Card - KWH', price: BASE },
+                { label: STATE.package.label, price: STATE.package.price },
+                { label: STATE.fee.label, price: STATE.fee.price },
+                ...STATE.addons.map(a => ({ label: a.label, price: a.price }))
+            ];
+            document.getElementById('confirmLines').innerHTML = lines.map(l =>
+                `<div class="flex justify-between text-gray-600"><span>${l.label}</span><span>€${l.price.toFixed(2)}</span></div>`
+            ).join('');
+            document.getElementById('confirmTotal').textContent = '€' + calcTotal();
+        }
+
+        /* ── Radio groups ── */
+        document.querySelectorAll('.option-radio').forEach(el => {
+            el.addEventListener('click', () => {
+                const group = el.dataset.group;
+                document.querySelectorAll(`.option-radio[data-group="${group}"]`).forEach(r => {
+                    r.classList.remove('selected');
+                    r.style.borderColor = '';
+                    r.style.backgroundColor = '';
+                    const dot = r.querySelector('.radio-dot');
+                    const ring = r.querySelector('div:first-child');
+                    ring.style.borderColor = '#d1d5db';
+                    dot.style.display = 'none';
+                });
+                el.classList.add('selected');
+                el.style.borderColor = '#87C332';
+                el.style.backgroundColor = 'rgba(135,195,50,0.05)';
+                const dot = el.querySelector('.radio-dot');
+                const ring = el.querySelector('div:first-child');
+                ring.style.borderColor = '#87C332';
+                dot.style.display = 'block';
+
+                STATE[group] = { label: el.dataset.label, price: parseFloat(el.dataset.price) };
+                updateSummary();
+            });
+        });
+
+        /* ── Checkboxes ── */
+        document.querySelectorAll('.option-check').forEach(el => {
+            el.addEventListener('click', () => {
+                const isSelected = el.classList.contains('selected');
+                const checkIcon = el.querySelector('.check-icon');
+                const checkEmpty = el.querySelector('.check-empty');
+                const badge = el.querySelector('span.rounded-full');
+                const price = parseFloat(el.dataset.price);
+                const label = el.dataset.label;
+
+                if (isSelected) {
+                    el.classList.remove('selected');
+                    el.style.borderColor = '';
+                    el.style.backgroundColor = '';
+                    checkIcon.style.display = 'none';
+                    checkEmpty.style.display = '';
+                    badge.style.background = '#f3f4f6';
+                    badge.style.color = '#6b7280';
+                    STATE.addons = STATE.addons.filter(a => a.label !== label);
+                } else {
+                    el.classList.add('selected');
+                    el.style.borderColor = '#87C332';
+                    el.style.backgroundColor = 'rgba(135,195,50,0.05)';
+                    checkIcon.style.display = 'flex';
+                    checkEmpty.style.display = 'none';
+                    badge.style.background = 'rgba(135,195,50,0.1)';
+                    badge.style.color = '#87C332';
+                    STATE.addons.push({ label, price });
+                }
+                updateSummary();
+            });
+        });
+
+        updateSummary();
+
+
+        const CB_STATE = { cb1: false, cb2: false, cb3: false };
+
+        function toggleCb(id) {
+        CB_STATE[id] = !CB_STATE[id];
+
+        const box = document.getElementById(id);
+        const icon = document.getElementById(id + '-icon');
+        const row  = document.getElementById('row-' + id);
+        const dot  = document.getElementById('dot' + id.slice(2));
+
+        if (CB_STATE[id]) {
+            box.classList.add('checked');
+            icon.classList.remove('hidden');
+            row.style.borderColor = '#87C332';
+            row.style.background  = 'rgba(135,195,50,0.04)';
+            if (dot) dot.style.background = '#87C332';
+        } else {
+            box.classList.remove('checked');
+            icon.classList.add('hidden');
+            row.style.borderColor = '';
+            row.style.background  = '';
+            if (dot) dot.style.background = '#e5e7eb';
+        }
+
+        const allChecked = CB_STATE.cb1 && CB_STATE.cb2 && CB_STATE.cb3;
+
+        document.querySelectorAll('.btn-submit').forEach(btn => {
+            btn.style.opacity        = allChecked ? '1' : '.45';
+            btn.style.cursor         = allChecked ? 'pointer' : 'not-allowed';
+            btn.style.pointerEvents  = allChecked ? 'auto' : 'none'; // ← KEY FIX
+        });
+
+        const hint = document.getElementById('agree-hint');
+        if (hint) hint.classList.toggle('hidden', allChecked);
+        }
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('signInModal');
+    modal.showModal ? modal.showModal() : modal.removeAttribute('hidden');
+});
+
+function switchModal(mode) {
+    const isSignup = mode === 'signup';
+    document.getElementById('signinForm').classList.toggle('hidden', isSignup);
+    document.getElementById('signupForm').classList.toggle('hidden', !isSignup);
+    document.getElementById('modalTitle').textContent = isSignup ? 'Create Account' : 'Sign in';
+    document.getElementById('modalSubtitle').textContent = isSignup
+        ? 'Join CO₂befreit and start saving.'
+        : 'Secure access to fuel management.';
+    document.getElementById('toggleText').innerHTML = isSignup
+        ? `Already have an account? <a href="#" onclick="switchModal('signin'); return false;" class="text-[#87C332] font-bold underline ml-1">Sign in</a>`
+        : `Don't have an account? <a href="#" onclick="switchModal('signup'); return false;" class="text-[#87C332] font-bold underline ml-1">Register now</a>`;
+}
+
+    </script>
+
+</body>
+</html>
