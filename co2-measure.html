@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Co2 Measure - CO2befreit.de</title>
+    <!-- Fav Icon -->
+    <link rel="icon" href="images/favicon.svg">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- link of aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- tailwind css file -->
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="text-sm md:text-[16px] text-[#1E1E1C] font-montserrat bg-[#F3F0EE]">
+
+    <!-- nav area -->
+    <nav class="header-nav-wrap  flex justify-center">
+        <div class="header-nav fixed w-full z-[999] top-3.5 sm:top-4.5 md:top-5 xl:top-6.5">
+            <div class="container w-full">
+                <div
+                    class="nav-inner bg-white rounded-md shadow-[0px 20px 30px -30px #3B3A374D] px-4 md:px-5 xl:px-8 xxl:px-9 py-2.5 lg:py-4 xl:py-5">
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-5 lg:col-span-2 xl:col-span-2">
+                            <div>
+                                <a href="index.html">
+                                    <img class="max-w-[80px] md:max-w-[140px] xl:max-w-[160px]" src="images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-span-8 xl:col-span-7 hidden lg:block">
+                            <div class="main-menu">
+                                <ul class="flex items-center gap-5 lg:gap-5 xl:gap-5 xxl:gap-10 py-3 md:py-5 lg:py-0">
+                                    <li>
+                                        <a class="font-semibold text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="/">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="about.html">About us</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="product.html">Products</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="die-co2-studie.html">CO₂ study</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-primary transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="co2-measure.html">CO₂ measurement</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300  hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-7 lg:col-span-2 xl:col-span-3">
+                           
+                            <div class="flex items-center justify-end gap-2 lg:gap-2.5 font-montserrat">
+
+                                <!-- Language -->
+                                <div class="relative md:after:content-[''] after:absolute after:w-[1px] after:h-[70%] after:top-1/2 after:-translate-y-1/2 after:left-[100%] after:bg-black/10 mr-2">
+
+                                    <button id="langBtn"
+                                    class="flex items-center gap-[4px] bg-transparent border-0 cursor-pointer px-[10px] py-[8px] rounded-[8px] text-[#222] text-[13px] font-medium hover:bg-primary/14 transition">
+                                    
+                                    <!-- Globe Icon -->
+                                    <svg class="w-[16px] h-[16px] stroke-[#555]" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                        <path d="M2 12h20"/>
+                                    </svg>
+
+                                    <span id="selectedLang" class="lg:hidden xl:block text-[13px] xl:text-sm">ENG</span>
+
+                                    <!-- Chevron -->
+                                    <svg class="w-[14px] h-[14px] stroke-[#888] -ml-[2px]" viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                        <path d="m6 9 6 6 6-6"/>
+                                    </svg>
+                                    </button>
+
+                                <!-- Dropdown -->
+                                    <div id="langMenu"
+                                    class="absolute right-0 mt-3 sm:mt-5 w-[120px] bg-white border border-primary/22 rounded-[8px] shadow-md opacity-0 invisible transition-all duration-150 p-1.5">
+
+                                    <button data-lang="ENG"
+                                        class="lang-item w-full text-left px-2.5 py-1.5 text-[13px] xl:text-sm hover:bg-primary/14 flex items-center gap-2 rounded-md mb-0.5">
+                                        <span class="w-[18px] h-[18px] rounded-full overflow-hidden border border-black/10"></span>
+                                        English
+                                    </button>
+
+                                    <button data-lang="DEU"
+                                        class="lang-item w-full text-left px-2.5 py-1.5 text-[13px] xl:text-sm hover:bg-primary/14 flex items-center gap-2 rounded-md">
+                                        <span class="w-[18px] h-[18px] rounded-full overflow-hidden border border-black/10"></span>
+                                        Deutsch
+                                    </button>
+
+                                    </div>
+                                </div>
+
+                                <!-- Login -->
+                                <button command="show-modal" commandfor="signInModal"
+                                    class="login-button cursor-pointer hidden sm:flex items-center gap-[6px] bg-primary/14 border-1 border-primary/22 rounded-[9px] px-[16px] py-[8px] text-[#222] text-[13px] xl:text-sm font-semibold hover:bg-primary/25 hover:border-primary/28 transition whitespace-nowrap">
+                                    Log in
+                                </button>
+
+                                <!-- Register -->
+                                <button command="show-modal" commandfor="signUpModal"
+                                    class="register-button cursor-pointer hidden sm:flex items-center gap-[6px] bg-primary text-[#0f1f00] text-[13px] xl:text-sm font-bold px-[18px] py-[9px] rounded-[9px] shadow-[0_1px_3px_rgba(135,195,50,0.25)] hover:bg-[#9ed93a] active:scale-95 transition whitespace-nowrap">
+                                    Register
+                                    <svg class="lg:hidden xl:block w-[15px] h-[15px] stroke-[#0f1f00]" viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6"/>
+                                    </svg>
+                                </button>
+
+                                <button command="show-modal" commandfor="drawer" class="lg:hidden cursor-pointer sm:ml-2">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 12H21" stroke="#1E1E1C" stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                        <path d="M3 7H21" stroke="#1E1E1C" stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                        <path d="M3 17H21" stroke="#1E1E1C" stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header area -->
+    <header class="bg-[url('../images/about-hero-bg.png')] bg-cover bg-center bg-no-repeat min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] relative z-[9] after:absolute after:content-[''] after:block after:w-full after:h-full after:left-0 after:top-0 after:bg-gray-900/30 after:z-[-1]">
+
+
+    <div class="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] flex flex-col justify-center overflow-hidden text-white font-montserrat pt-[115px] md:pt-22 lg:pt-18 xl:pt-27 pb-6 sm:pb-0">
+        <div class="container">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 z-[2] bg-[rgba(5,12,0,0.10)]"></div>
+
+            <!-- Right Decoration -->
+            <div class="absolute top-1/2 right-[7vw] xl:right-[15vw] -translate-y-1/2 z-[5] w-[320px] h-[320px] rounded-full border border-[rgba(135,195,50,0.12)] flex items-center justify-center">
+                <div class="absolute w-[220px] h-[220px] rounded-full border border-[rgba(135,195,50,0.18)]"></div>
+                <div class="absolute w-[130px] h-[130px] rounded-full bg-[rgba(135,195,50,0.08)] border border-[rgba(135,195,50,0.25)]"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 text-center max-w-[1240px] mx-auto">
+
+                <!-- Heading -->
+                <h1 class="text-[26px] lg:text-[40px] xl:text-[60px] font-bold leading-[130%] tracking-[-0.025em] mb-5 sm:mb-6">
+                    <span class="text-secondary">CO₂ measurement – </span> <br>
+                <span> Transparency from the very beginning</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-base lg:text-xl xl:text-2xl leading-[155%] text-[#EDECE4] mb-6.5 sm:mb-9 max-w-[1140px] mx-auto">
+                    Know CO₂, compensate CO₂: We measure your vehicle now and again in four months – for a transparent balance and 100% compensation
+                </p>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- header area -->
+
+    <!-- sidebar area -->
+    <el-dialog>
+        <dialog id="drawer" aria-labelledby="drawer-title"
+            class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+            <el-dialog-backdrop
+                class="absolute inset-0 bg-[#010b13a8] backdrop-blur-[5px] transition-opacity duration-400 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+
+            <div tabindex="0" class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+                <el-dialog-panel class="group/dialog-panel relative ml-auto block h-full w-full max-w-[300px]
+                transform transition duration-500 ease-in-out
+                data-closed:translate-x-full sm:duration-700">
+                    <!-- Close button, show/hide based on slide-over state. -->
+                    <div
+                        class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 duration-400 ease-in-out group-data-closed/dialog-panel:opacity-0 sm:-ml-10 sm:pr-4">
+                        <button type="button" command="close" commandfor="drawer"
+                            class="relative rounded-md text-gray-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 cursor-pointer">
+                            <span class="absolute -inset-2.5"></span>
+                            <span class="sr-only">Close panel</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-white/10 rounded-bl-xl rounded-tl-xl">
+
+                        <div class="px-4 sm:px-6 flex items-center justify-between">
+                            <h2 id="drawer-title" class="text-base font-semibold text-primary">Menu</h2>
+                            <div>
+                                <a href="#">
+                                    <img class="max-w-[90px]" src="images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                            <div class="lg:hidden border-t border-slate-200">
+                                <div class="border-b border-slate-200">
+                                    <a href="/" class="block py-3 font-medium text-[#1E1E1C]">Home</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="about.html" class="block py-3 font-medium text-[#1E1E1C]">About us</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="product.html" class="block py-3 font-medium text-[#1E1E1C]">Products</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="die-co2-studie.html" class="block py-3 font-medium text-[#1E1E1C]">CO₂ study</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="co2-measure.html" class="block py-3 font-medium text-[#1E1E1C]">CO₂ measurement</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="contact.html" class="block py-3 font-medium text-[#1E1E1C]">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sm:hidden mt-auto px-4 flex flex-col gap-3">
+                            <!-- Login -->
+                            <button command="show-modal" commandfor="signInModal"
+                                class="flex items-center gap-[6px] bg-primary/14 border-1 border-primary/22 rounded-[9px] px-[16px] py-[8px] text-[#222] text-[13px] xl:text-sm font-semibold hover:bg-primary/25 hover:border-primary/28 transition whitespace-nowrap justify-center w-full">
+                                Log in
+                            </button>
+
+                            <!-- Register -->
+                            <button command="show-modal" commandfor="signUpModal"
+                                class="flex items-center gap-[6px] bg-primary text-[#0f1f00] text-[13px] xl:text-sm font-bold px-[18px] py-[9px] rounded-[9px] shadow-[0_1px_3px_rgba(135,195,50,0.25)] hover:bg-[#9ed93a] active:scale-95 transition whitespace-nowrap w-full justify-center">
+                                Register
+                                <svg class="lg:hidden xl:block w-[15px] h-[15px] stroke-[#0f1f00]" viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <path d="m9 18 6-6-6-6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+    <!-- sidebar area -->
+
+    <!-- features area -->
+    <section class="lg:py-16 py-5 mt-5 lg:mt-0">
+        <div class="container">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-5 lg:gap-7 xl:gap-15 xxl:gap-18 gap-y-5 items-center">
+                
+                 <div class="flex">
+                    <div class="flex-1 flex items-center">
+                        <img class="w-full" src="images/measure1.png" alt="" class="object-cover">
+                    </div>
+                </div>
+               
+                <div class="xl:space-y-8 md:space-y-6 space-y-5">
+
+                    <div class="xl:space-y-3 lg:space-y-2 space-y-2">
+                        <div class="font-bold xl:text-[42px] lg:text-[38px] md:text-[30px] text-2xl leading-[120%]">
+                             Only what is measured can <span class="text-primary"> be changed </span></div>
+                    </div>
+                    <div class="xl:space-y-6 lg:space-y-4 space-y-2.5">
+                        <div class="md:text-lg text-base text-gray-600 md:leading-8 leading-6">
+                            To ensure our study is meaningful, we start with a clear initial measurement and end with a final measurement.
+                            This is the only way to show how your consumption and CO₂ balance develop – transparent, comprehensible and individual.
+                        </div>
+                       
+                    </div>
+    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- features area -->
+
+    <!-- features area -->
+    <section class="lg:py-16 py-5">
+        <div class="container">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-5 lg:gap-7 xl:gap-15 xxl:gap-18 gap-y-5 items-center">
+
+                <div class="xl:space-y-8 md:space-y-6 space-y-5 order-2 lg:order-1">
+                    <div class="xl:space-y-6 lg:space-y-4 space-y-2.5">
+
+                        <div class="xl:space-y-3 space-y-2">
+
+                           <div class="xl:space-y-3 lg:space-y-2 space-y-2 mb-3 md:mb-5 lg:mb-7">
+                                <div class="font-bold xl:text-[42px] lg:text-[38px] md:text-[30px] text-2xl leading-[120%]">
+                                This is how the <span class="text-primary">measurement works</span></div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-semibold text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">Workshop check at the beginning:</div>
+                                        <div class="text-xs md:text-sm text-gray-500 font-normal">Emissions measurement, consumption & vehicle data</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-semibold text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">Study phase:</div>
+                                        <div class="text-xs md:text-sm text-gray-500 font-normal">Consumption data via card + mileage reporting</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-semibold text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">Final measurement:</div>
+                                        <div class="text-xs md:text-sm text-gray-500 font-normal">Comparison with starting values after 4 months</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-semibold text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">CO₂ report:</div>
+                                        <div class="text-xs md:text-sm text-gray-500 font-normal">Your personal analysis + official compensation certificate</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-1 md:pt-2 lg:pt-3">
+                                <a href="product.html#cardArea" class="inline-flex items-center gap-2 bg-primary text-[#0f1f00] font-grotesk font-bold text-[15px] px-8 py-[14px] rounded-xl cursor-pointer border-none hover:bg-[#9ed93a] active:scale-[0.97] transition-all duration-150 w-fit">
+                                Select card
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+
+                <div class="flex order-1 lg:order-2">
+                    <div class="flex-1 flex items-center">
+                        <img class="w-full" src="images/measure2.png" alt="" class="object-cover">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- features area -->
+   
+    <!-- features area -->
+    <section class="lg:py-16 py-5">
+        <div class="container">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-5 lg:gap-7 xl:gap-15 xxl:gap-18 gap-y-5 items-center">
+
+                <div class="flex">
+                    <div class="flex-1 flex items-center">
+                        <img class="w-full" src="images/measure03.png" alt="" class="object-cover">
+                    </div>
+                </div>
+
+                <div class="xl:space-y-8 md:space-y-6 space-y-5">
+                    <div class="xl:space-y-6 lg:space-y-4 space-y-2.5">
+
+                        <div class="xl:space-y-3 space-y-2">
+
+                           <div class="xl:space-y-3 lg:space-y-2 space-y-2">
+                                <div class="font-bold xl:text-[42px] lg:text-[38px] md:text-[30px] text-2xl leading-[120%]">
+                                <span class="text-primary">Measurement </span> 
+                                    according to recognized
+                                    <span class="text-primary">standards</span>
+                                </div> 
+                            </div>
+                            <div class="xl:space-y-6 lg:space-y-4 space-y-2.5 pb-2 md:pb-3 xl:pb-4">
+                                <div class="md:text-lg text-base text-gray-600 md:leading-8 leading-6">
+                                    We work with <b>official</b> methods and check all data according to the highest <b>standards:</b>
+                                </div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-medium text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">
+                                            Emission factors of the 
+                                            <span class="font-semibold">German Environment Agency (UBA)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-medium text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">
+                                            Reference to <span class="font-semibold"> WLTP & RDE standards</span> for comparability
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex md:gap-4 gap-3 items-center p-3 rounded-xl bg-primary/10 border border-transparent hover:border-lime-100 transition-all duration-200 group">
+                                <div class="flex items-center justify-center bg-[#F3F0EE] border border-primary/25 text-lime-800 p-2.5 rounded-xl shrink-0 transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check size-6 text-primary">
+                                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between flex-1 gap-2 flex-wrap">
+                                    <div>
+                                        <div class="font-medium text-[15px] md:text-base xl:text-lg leading-6 text-gray-700">
+                                            Compensation exclusively according to 
+                                            <span class="font-semibold"> Gold Standard</span> 
+                                            and 
+                                            <span class="font-semibold"> Verra,</span>
+                                            including published project IDs
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- features area -->
+
+    <!-- features area -->
+    <section class="lg:py-16 py-5">
+        <div class="container">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-5 lg:gap-7 xl:gap-15 xxl:gap-18 gap-y-5 items-center">
+
+                <div class="xl:space-y-8 md:space-y-6 space-y-5 order-2 lg:order-1">
+                    <div class="xl:space-y-6 lg:space-y-4 space-y-2.5">
+
+                        <div class="xl:space-y-3 space-y-2">
+
+                           <div class="xl:space-y-3 lg:space-y-2 space-y-2 mb-3 md:mb-5 lg:mb-7">
+                                <div class="font-bold xl:text-[42px] lg:text-[38px] md:text-[30px] text-2xl leading-[120%]">
+                               This is what your <span class="text-primary">CO₂ balance</span> looks like</div>
+                            </div>
+
+                             <div class="xl:space-y-6 lg:space-y-4 space-y-2.5 pb-2 md:pb-3 xl:pb-4">
+                                <div class="md:text-lg text-base text-gray-600 md:leading-8 leading-6">
+                                    An example: 60 liters of petrol per month correspond to around 142 kg of CO₂. We purchase and “retire” exactly <b>142 kg</b> of CO₂ certificates – fully offsetting your emissions. <br>
+                                    This way you always know: <br>
+                                    <b> Every liter, every kilowatt-hour is 100% compensated.</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex order-1 lg:order-2">
+                    <div class="flex-1 flex items-center">
+                        <img class="w-full" src="images/measure4.png" alt="" class="object-cover">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- features area -->
+
+
+    <!-- Testimonial slider area -->
+    <section class="pb-10 pt-9 md:py-14 overflow-hidden bg-primary/5">
+
+    <!-- ── Header ── -->
+    <div class="text-center px-6 pb-9 md:mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-5" style="background:rgba(135,195,50,0.07);border-color:rgba(135,195,50,0.3);">
+        <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#87C332;"></span>
+        <span class="text-xs font-bold uppercase tracking-widest" style="color:#3b6d11;">Trusted by drivers</span>
+        </div>
+        <h2 class="text-[clamp(28px,4vw,45px)] font-extrabold text-gray-900 leading-[120%] tracking-tight mb-3">
+        Customer <span style="color:#87C332;">Reviews</span>
+        </h2>
+        <p class="text-gray-800 text-[15px] xl:text-base mt-3 max-w-sm mx-auto mb-7">
+        Real stories from our CO₂befreit community
+        </p>
+        <!-- Aggregate badge -->
+        <div class="inline-flex items-center gap-4 px-6 py-3 rounded-2xl bg-white border shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+        <div>
+            <div class="flex gap-0.5 mb-0.5">
+            <span class="text-lg" style="color:#87C332;">★★★★★</span>
+            </div>
+            <div class="text-xs text-gray-400 text-left">Overall rating</div>
+        </div>
+        <div class="w-px h-8 bg-gray-100"></div>
+        <div class="text-left">
+            <div class="text-2xl font-extrabold text-gray-900 leading-none">4.8</div>
+            <div class="text-xs text-gray-400 mt-0.5">out of 5.0</div>
+        </div>
+        <div class="w-px h-8 bg-gray-100"></div>
+        <div class="text-left">
+            <div class="text-2xl font-extrabold text-gray-900 leading-none">20</div>
+            <div class="text-xs text-gray-400 mt-0.5">reviews</div>
+        </div>
+        </div>
+    </div>
+
+    <!-- ── Row 1 scrolls LEFT ── -->
+    <div class="relative mb-5">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-28 z-10 fade-l hidden md:block"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-28 z-10 fade-r hidden md:block"></div>
+        <div class="overflow-hidden" id="wrap1">
+        <div class="track-left" id="row1">
+
+            <!-- R1 Card 1 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1">
+                    <span style="color:#87C332; font-size:13px;">★★★★★</span>
+                </div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Cupiditate id eius consequatur ipsam sit. Maiores est ea magni asperiores aut est hic. Recusandae quam aperiam totam aperiam."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#e8f5c2;color:#3b6d11;">OF</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Frau Prof. Olga Feldmann</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Leiter Rechtsabteilung</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 2 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Facere voluptatem et officia atque. Numquam veniam perferendis ducimus dolorem nam. Deleniti expedita pariatur ut."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#d1f0a0;color:#2d5a0a;">AB</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Frau Dr. Angela Behrens</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Vorstand Vertrieb</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 3 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Perferendis ab voluptatum mollitia esse accusamus. Eum nam praesentium perspiciatis reprehenderit. Dolor consequatur dicta velit asperiores."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#c8e88a;color:#1e3d07;">HW</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Heidi Witt</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Vorstand Vertrieb</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 4 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Consectetur voluptas voluptates aut illum. Rerum quaerat non omnis qui necessitatibus nulla soluta. Eos laboriosam architecto magnam."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#eaf3de;color:#3b6d11;">NK</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Natalie Keller</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Leiter Rechtsabteilung</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 5 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Quibusdam quia provident veritatis accusamus. Rerum saepe accusantium autem dicta numquam. Sapiente eveniet ullam unde tenetur."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#dcefb4;color:#2d5a0a;">EV</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Elsbeth Voss</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Geschäftsführender Gesellschafter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 6 — 4 star -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Consequuntur et consequatur esse quibusdam atque asperiores sed nostrum. Natus modi laborum corporis voluptatibus culpa."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#e8f5c2;color:#3b6d11;">KS</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Karl-Ernst Schramm</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Personalleiter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+            <!-- R1 Card 7 — 4 star -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Officia dolorum laborum dolores eaque laboriosam et. Doloremque fugiat est debitis distinctio doloribus. Maiores qui id corrupti."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#d1f0a0;color:#2d5a0a;">ES</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Eugen Schütz</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Finanzvorstand</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+            <!-- R1 Card 8 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Corrupti dolor sed quos voluptatem consequatur perferendis. Vero enim error ut et. Aliquam dolores qui omnis aut."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#c8e88a;color:#1e3d07;">AW</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Anna-Maria Wimmer</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Vorsitzender des Aufsichtsrats</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 9 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Omnis consectetur quod repellendus error quisquam vel aut. Dignissimos laudantium debitis ut ex dolores est culpa."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#eaf3de;color:#3b6d11;">KB</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Klaus-Jürgen Brenner</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Bereichsleiter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R1 Card 10 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Rerum laborum sequi quam hic non recusandae. Molestiae autem quos aut quisquam voluptas. Eligendi dolorem nihil in autem."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#dcefb4;color:#2d5a0a;">EW</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Ellen Werner B.A.</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Vorsitzender des Aufsichtsrats</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+    <!-- ── Row 2 scrolls RIGHT ── -->
+    <div class="relative mt-1">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-28 z-10 fade-l hidden md:block"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-28 z-10 fade-r hidden md:block"></div>
+        <div class="overflow-hidden" id="wrap2">
+        <div class="track-right" id="row2">
+
+            <!-- R2 Card 1 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Ut numquam et ut aut ut dolorum ut. Et qui enim iure. Quibusdam necessitatibus mollitia consequatur eius magni."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#e8f5c2;color:#3b6d11;">JF</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Jolanta Falk</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Personalleiter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+            <!-- R2 Card 2 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Id iste quas amet et tempore porro. Aut totam qui aliquid ut sapiente. Vitae rerum facilis sapiente quas et quaerat ipsam."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#d1f0a0;color:#2d5a0a;">EA</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Erna Arnold</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Betriebsleiter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R2 Card 3 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Molestias voluptatibus atque facilis excepturi velit vel minus consequatur. Est porro ipsa laborum voluptas. Sunt at incidunt."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#c8e88a;color:#1e3d07;">CR</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Carla Rudolph B.Sc.</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Abteilungsdirektor</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+            <!-- R2 Card 4 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Sunt in cupiditate at qui aut. Dolorem facilis sapiente facere voluptates est tempora est dolor."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#eaf3de;color:#3b6d11;">WW</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Wendelin Wiedemann</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Kaufmännischer Vorstand</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R2 Card 5 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Suscipit consequatur itaque enim ut dolorem non. Praesentium veniam aliquid accusantium. Doloremque beatae ratione ut explicabo provident."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#dcefb4;color:#2d5a0a;">MS</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Mina Straub</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Personalleiter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R2 Card 6 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Deserunt voluptatem sapiente sed perspiciatis explicabo corrupti. Nihil natus nulla odio et corrupti doloribus."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#e8f5c2;color:#3b6d11;">IS</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Ingo Schütze B.Eng.</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Geschäftsführender Gesellschafter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+            <!-- R2 Card 7 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Et et omnis dignissimos nihil atque sequi qui. Repellat aut soluta eum aut. Quis impedit dolor est qui ullam."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#d1f0a0;color:#2d5a0a;">EJ</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Egon Jordan B.Sc.</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Gesellschafter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R2 Card 8 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Magni quaerat quam est. Velit possimus consequuntur cupiditate velit tempore non ut. Placeat et repellendus odio non ratione."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#c8e88a;color:#1e3d07;">LD</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Ludmilla Dörr MBA.</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Abteilungsdirektor</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+            <!-- R2 Card 9 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#87C332;font-size:13px;">★★★★★</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Tempora doloribus et quaerat nam repellat aspernatur. Maiores voluptatibus aut ab aspernatur. Voluptatum eum non et omnis."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#eaf3de;color:#3b6d11;">HW</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">Hans-Gerd Walter</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Betriebsleiter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#f0f9d8;color:#3b6d11;">5.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#c8e88a,#87C332);"></div>
+            </div>
+
+            <!-- R2 Card 10 -->
+            <div class="review-card max-w-[320px] md:max-w-[400px] w-full mx-2 md:mx-3 rounded-2xl bg-white overflow-hidden" style="border:1px solid rgba(0,0,0,0.07); box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+            <div class="px-4.5 pt-3 pb-3">
+                <div class="flex items-start justify-between mb-3">
+                <svg class="quote-svg w-10 h-10 flex-shrink-0" viewBox="0 0 40 32" fill="#87C332"><path d="M0 20C0 10.059 6.2 3.294 18.6 0L20 3.294C13.8 5.176 10.4 8.47 9.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C20.6 17.1 21.4 19.373 21.4 22c0 2.824-.933 5.098-2.8 6.824C16.733 30.549 14.4 31.412 11.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C1.8 25.529.8 23.06 0 20zm22 0C22 10.059 28.2 3.294 40.6 0L42 3.294C35.8 5.176 32.4 8.47 31.8 13.176c.8-.392 1.733-.588 2.8-.588 2.667 0 4.8.902 6.4 2.706C42.6 17.1 43.4 19.373 43.4 22c0 2.824-.933 5.098-2.8 6.824C38.733 30.549 36.4 31.412 33.6 31.412c-3.2 0-5.8-1.177-7.8-3.53C23.8 25.529 22.8 23.06 22 20z"/></svg>
+                <div class="flex gap-0.5 mt-1"><span style="color:#eab308;font-size:13px;">★★★★☆</span></div>
+                </div>
+                <p class="text-gray-600 text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-3.5 !min-h-[100px]" style="min-height:60px;">"Omnis maxime quisquam sed consequuntur voluptas repudiandae. Et laboriosam accusantium ea harum qui excepturi doloribus."</p>
+                <div class="flex items-center gap-3 pt-4 border-t" style="border-color:rgba(0,0,0,0.06);">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-extrabold" style="background:#dcefb4;color:#2d5a0a;">WS</div>
+                <div class="min-w-0">
+                    <p class="font-bold text-gray-900 text-sm leading-tight truncate">William Scherer</p>
+                    <p class="text-gray-400 text-xs mt-0.5">Handlungsbevollmächtigter</p>
+                </div>
+                <div class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-1 rounded-lg" style="background:#fffbeb;color:#92400e;">4.0</div>
+                </div>
+            </div>
+            <div class="h-1" style="background:linear-gradient(to right,#fde68a,#eab308);"></div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+    </section>
+    <!-- Testimonial slider area -->
+
+
+
+    <!-- Get the app area -->
+    <div class="font-grotesk pr-3 md:pr-6 lg:pr-6 xl:pr-10">
+        <section class="bg-[#0d1a06] rounded-br-[36px] rounded-tr-[36px] overflow-hidden relative">
+            <div class="container">
+
+                <!-- Decorative bg elements -->
+                <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/[0.06] blur-3xl pointer-events-none"></div>
+                <div class="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-primary/[0.04] blur-2xl pointer-events-none"></div>
+                <!-- Grid pattern -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,#87C332 39px,#87C332 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#87C332 39px,#87C332 40px);"></div>
+        
+                <div class="max-w-7xl mx-auto pt-10 pb-9 md:py-12 xl:py-16 relative z-10">
+                    <div class="lg:grid grid-cols-12 gap-10 lg:gap-16 items-center">
+        
+                    <!-- LEFT: App image -->
+                    <div class="col-span-12 lg:col-span-4 flex justify-center lg:justify-start relative">
+        
+                        <!-- Glow behind phone -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-56 h-56 rounded-full bg-primary/20 blur-3xl"></div>
+                        </div>
+        
+                        <!-- Phone mockup wrapper -->
+                        <div class="relative z-10 flex items-end gap-4">
+                        <img
+                            src="images/app-mobile.png"
+                            alt="CO₂befreit App"
+                            class="max-h-[380px] lg:max-h-[420px] w-auto object-contain drop-shadow-2xl"/>
+                       
+                        </div>
+        
+                    </div>
+        
+                    <!-- RIGHT: Content -->
+                    <div class="col-span-12 lg:col-span-8 flex flex-col gap-7">
+        
+                        <!-- Eyebrow -->
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.07] border border-primary/25 w-fit">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        <span class="text-[13px] font-bold tracking-[.1em] uppercase text-primary/80">Mobile app</span>
+                        </div>
+        
+                        <!-- Heading with left bar -->
+                        <div class="space-y-1">
+                            <div class="text-white/70 text-[15px] font-medium tracking-wide">Download the app</div>
+                            <div class="flex items-center gap-4 pt-3 md:pt-4">
+                                <div class="w-1.5 h-20 bg-primary rounded-full flex-shrink-0 mt-1"></div>
+                                <h2 class="text-[clamp(28px,4vw,45px)] font-extrabold text-white leading-tight tracking-tight">
+                                Everything at a glance — with the <span class="text-primary">CO₂befreit app</span>
+                                </h2>
+                            </div>
+                        </div>
+        
+                        <!-- Description -->
+                        <p class="text-sm md:text-[18px] text-white/70 leading-relaxed">
+                        With our app, you always have full control over your fuel or charging card.
+                        Whether on the road or at home: the <span class="text-primary font-semibold">CO₂befreit app</span> makes your mobility transparent, simple and sustainable.
+                        </p>
+        
+                        <!-- Feature pills -->
+                        <div class="flex flex-wrap gap-2.5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/[0.07] border border-white/[0.1] text-white/75 text-xs md:text-[15px] font-medium">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Real-time CO₂ tracking
+                        </div>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/[0.07] border border-white/[0.1] text-white/75 text-xs md:text-[15px] font-medium">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                            Card management
+                        </div>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/[0.07] border border-white/[0.1] text-white/75 text-xs md:text-[15px] font-medium">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+                            Monthly reports
+                        </div>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/[0.07] border border-white/[0.1] text-white/75 text-xs md:text-[15px] font-medium">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Station finder
+                        </div>
+                        </div>
+        
+                        <!-- Download buttons -->
+                        <div class="flex items-center gap-3">
+        
+                        <!-- App Store -->
+                        <a href="#" class="inline-flex items-center gap-3 bg-white/[0.07] border border-white/[0.12] hover:bg-white/[0.12] hover:border-primary/30 transition-all duration-200 rounded-2xl px-4 md:px-5 py-3 group">
+                            <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            <div>
+                            <div class="text-white/65 text-[11px] md:text-[12px] leading-none mb-0.5">Download on the</div>
+                            <div class="text-white font-bold text-sm md:text-[16px] leading-tight group-hover:text-primary transition-colors">App Store</div>
+                            </div>
+                        </a>
+        
+                        <!-- Google Play -->
+                        <a href="#" class="inline-flex items-center gap-3 bg-white/[0.07] border border-white/[0.12] hover:bg-white/[0.12] hover:border-primary/30 transition-all duration-200 rounded-2xl px-4 md:px-5 py-3 group">
+                            <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="white"><path d="M3.18 23.76c.37.21.8.22 1.19.03l11.31-6.43-2.56-2.57-9.94 8.97zM.5 1.4C.19 1.8 0 2.36 0 3.06v17.88c0 .7.19 1.26.51 1.66l.09.08 10.01-10.01v-.24L.59 1.32.5 1.4zm19.1 10.19l-2.86-1.62-2.85 2.85 2.85 2.85 2.87-1.63c.82-.46.82-1.99-.01-2.45zm-16.06 9.8l9.94-8.97-2.56-2.56L1.37 20.53l2.17.86z"/></svg>
+                            <div>
+                            <div class="text-white/65 text-[11px] md:text-[12px] leading-none mb-0.5">Get it on</div>
+                            <div class="text-white font-bold text-sm md:text-[16px] leading-tight group-hover:text-primary transition-colors">Google Play</div>
+                            </div>
+                        </a>
+        
+                        </div>
+        
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+    <!-- Get the app area -->
+
+
+    <!-- ═══ FAQ SECTION ═══ -->
+    <section class="font-grotesk">
+        <div class="container">
+            <div class="max-w-[950px] mx-auto py-10 md:py-20">
+            
+            <!-- Header -->
+            <div class="text-center mb-8 md:mb-14">
+                
+                  <!-- Eyebrow -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/15 border border-primary/25 w-fit">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span class="text-[13px] font-bold tracking-[.1em] uppercase text-primary leading-[120%]">FAQs</span>
+                </div>
+
+                <h2 class="text-[clamp(1.7rem,4vw,2.6rem)] font-extrabold leading-[1.2] text-[#111] tracking-[-0.02em] pt-4 md:pt-5.5">
+                Frequently asked questions<br class="hidden md:block">about the <span class="text-primary">CO₂befreit study</span>
+                </h2>
+            </div>
+            
+            <!-- FAQ list — single column -->
+            <div class="flex flex-col gap-3" id="faqGrid">
+            
+                <!-- Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">1</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">What is the CO₂befreit study?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>The CO₂befreit study is a research project in which selected participants can <b class="text-[#2a2a2a] font-bold">fuel or charge for free for four months.</b> All CO₂ emissions generated are 100% compensated through <b class="text-[#2a2a2a] font-bold">certified climate protection projects.</b> The goal is to scientifically examine <b class="text-[#2a2a2a] font-bold">driving behavior, awareness of emissions</b> and acceptance of compensation solutions.</p>
+                </div>
+                </div>
+            
+                <!-- Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">2</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">Who can participate?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>All drivers of <b class="text-[#2a2a2a] font-bold">petrol, diesel or electric vehicles</b> who are regularly on the road can participate. We are looking for <b class="text-[#2a2a2a] font-bold">as broad a mix as possible:</b> commuters, frequent drivers, occasional drivers and also small business owners. The only requirement is willingness to take part in the <b class="text-[#2a2a2a] font-bold">free measurements</b> and share your driving data transparently.</p>
+                </div>
+                </div>
+            
+                <!-- Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">3</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">Which cards are available?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>You can choose between two card types:</p>
+                    <ul class="mt-2 mb-2 ml-4 list-disc"><li><b class="text-[#2a2a2a] font-bold">Fuel card</b> for fossil fuels (petrol/diesel)</li><li><b class="text-[#2a2a2a] font-bold">Charging card</b> for electric vehicles</li></ul>
+                    <p class="mt-2">Both cards are available as <b class="text-[#2a2a2a] font-bold">Virtual</b> or <b class="text-[#2a2a2a] font-bold">Physical</b> versions, and are flexibly configurable (national/international, car wash, ACE).</p>
+                </div>
+                </div>
+            
+                <!-- Item 4 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">4</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">Where can I use the card?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <ul class="ml-4 list-disc"><li><b class="text-[#2a2a2a] font-bold">Fuel card:</b> large network of partner stations in Germany, optionally internationally.</li><li><b class="text-[#2a2a2a] font-bold">Charging card:</b> thousands of public charging points, optionally Europe-wide via roaming.</li><li>Also usable at <b class="text-[#2a2a2a] font-bold">service partners</b> such as car washes or ACE.</li></ul>
+                </div>
+                </div>
+            
+                <!-- Item 5 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">5</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">What does participation cost?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>Participation is <b class="text-[#2a2a2a] font-bold">free.</b> You only pay a one-time activation fee (€3.99 virtual / €9.99 physical + deposit). All fuel or charging volumes within your selected tariff are <b class="text-[#2a2a2a] font-bold">completely free of charge.</b></p>
+                </div>
+                </div>
+            
+                <!-- Item 6 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">6</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">What tariffs are available?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>Three tariffs for both card types:</p>
+                    <ul class="mt-2 ml-4 list-disc"><li><b class="text-[#2a2a2a] font-bold">Standard:</b> 60 L or 60 kWh / month</li><li><b class="text-[#2a2a2a] font-bold">Commuter:</b> 150 L or 150 kWh / month</li><li><b class="text-[#2a2a2a] font-bold">Frequent driver:</b> 300 L or 300 kWh / month</li></ul>
+                </div>
+                </div>
+            
+                <!-- Item 7 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">7</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">How does the CO₂ measurement work?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>Before and after the study, your vehicle is <b class="text-[#2a2a2a] font-bold">checked free of charge at a partner workshop</b> (emissions &amp; consumption analysis). The card documents all fueling or charging. From this we create your <b class="text-[#2a2a2a] font-bold">personal CO₂ balance</b>, which is fully compensated.</p>
+                </div>
+                </div>
+            
+                <!-- Item 8 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">8</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">How are the emissions compensated?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>All emissions are offset through verified projects:</p>
+                    <ul class="mt-2 mb-2 ml-4 list-disc"><li>Reforestation programs</li><li>Renewable energy (wind, solar, hydro)</li><li>Clean cookstoves in developing countries</li></ul>
+                    <p class="mt-2">We use exclusively <b class="text-[#2a2a2a] font-bold">Gold Standard</b> and <b class="text-[#2a2a2a] font-bold">Verra</b> certified projects — each verifiable by certificate number.</p>
+                </div>
+                </div>
+            
+                <!-- Item 9 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">9</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">What happens after the study?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>Your card stays active as a <b class="text-[#2a2a2a] font-bold">permanent benefit card</b> with:</p>
+                    <ul class="mt-2 ml-4 list-disc"><li>Exclusive discounts when fueling or charging</li><li>Additional packages (car wash, ACE, international)</li><li>Monthly CO₂ reports for your climate balance</li></ul>
+                </div>
+                </div>
+            
+                <!-- Item 10 -->
+                <div class="faq-item bg-white rounded-2xl border-[1.5px] border-black/[0.07] overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(135,195,50,0.12)]">
+                <button onclick="toggleFaq(this)" class="w-full flex items-start justify-between gap-3 px-5 py-[18px] bg-transparent border-none cursor-pointer text-left font-grotesk">
+                    <div class="flex items-start gap-3">
+                    <span class="faq-num min-w-[28px] h-7 rounded-lg bg-[#f0f9e0] text-[#3b6d11] text-[12px] lg:text-sm font-extrabold flex items-center justify-center flex-shrink-0 mt-[1px] transition-colors duration-200">10</span>
+                    <span class="text-[15px] lg:text-base xl:text-lg font-bold text-[#1a1a1a] leading-snug pt-0.5 md:pt-1">Why should I participate now?</span>
+                    </div>
+                    <div class="faq-chevron min-w-[22px] h-[22px] rounded-full bg-[#f3f3f3] flex items-center justify-center flex-shrink-0 mt-[3px] transition-all duration-200">
+                    <svg class="w-[13px] h-[13px] stroke-[#666] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </button>
+                <div class="faq-body px-5 pl-[60px] text-[14px] lg:text-base text-[#555] leading-[1.75]">
+                    <p>From <b class="text-[#2a2a2a] font-bold">2027</b>, fuel prices will rise significantly due to the new EU emissions trading system (+10–20 cents/liter estimated). With CO₂befreit, you experience today how to save costs while driving sustainably — and secure <b class="text-[#2a2a2a] font-bold">exclusive benefits not yet available on the market.</b></p>
+                </div>
+                </div>
+            
+            </div>
+            
+            <!-- CTA -->
+            <div class="text-center mt-7 md:mt-12">
+                <p class="text-[15px] text-[#666] mb-4">Still have questions? Our support team is happy to help.</p>
+                <a href="/contact" class="inline-flex items-center gap-[7px] bg-primary text-[#0f1f00] font-grotesk text-[14px] font-bold px-6 py-3 rounded-[10px] no-underline transition-colors duration-150 hover:bg-[#9ed93a]">
+                Contact us
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </a>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+    <!-- ═══ FAQ SECTION ═══ -->
+
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="bg-[#EAEAEA] text-[#3a5a10] font-grotesk">
+    <div class="container pt-9 md:pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.6fr] gap-10">
+
+        <!-- Brand -->
+        <div>
+            <div class="flex items-center gap-[10px] mb-4 lg:mb-5.5">
+            <a href="/">
+                <img class="max-w-[90px] md:max-w-[100px] xl:max-w-[130px]" src="images/logo.svg" alt="">
+            </a>
+            </div>
+            <p class="text-[17px] font-bold text-[#1a2e05] mb-2.5 md:mb-3 leading-snug">Drive. Save. Protect the climate.</p>
+            <p class="text-[15.5px] text-[#3a4a2a] leading-[1.7] mb-3.5 md:mb-5 lg:mb-6">With the CO₂befreit card you drive as usual, save with exclusive benefits and compensate every trip – for real mobility with responsibility.</p>
+            <div class="flex gap-2">
+            <a href="/" aria-label="Instagram" class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="/" aria-label="Facebook" class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Navigation</div>
+            <ul class="flex flex-col gap-[13px] list-none">
+            <li><a href="/" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Home</a></li>
+            <li><a href="/about" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">About us</a></li>
+            <li><a href="/products" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Products</a></li>
+            <li><a href="/die-co2-studie" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂ study</a></li>
+            <li><a href="/co2-measure" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂ measurement</a></li>
+            <li><a href="/contact" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Legal</div>
+            <ul class="flex flex-col gap-[13px] list-none">
+            <li><a href="/impress" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Imprint</a></li>
+            <li><a href="/data" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Privacy policy (GDPR)</a></li>
+            <li><a href="/condition" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Terms of participation</a></li>
+            <li><a href="/cookie" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Cookie settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Contact &amp; Support</div>
+            <div class="flex items-start gap-[10px] mb-[14px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+            </div>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Email</strong>
+                <a href="mailto:support@ecofuel-mobility.de" class="text-[#3a4a2a] no-underline hover:text-primary transition-colors">support@ecofuel-mobility.de</a>
+            </div>
+            </div>
+            <div class="flex items-start gap-[10px] mb-[14px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+            </div>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Phone</strong>
+                +49 (0) XXX - XXX XX XX
+            </div>
+            </div>
+            <div class="flex items-start gap-[10px] mb-[14px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Address</strong>
+                EcoFuel Mobility GmbH, Musterstraße 1, 12345 Berlin<br>
+                <span class="text-[#4a5a3a] text-[13.5px]">Mon–Fri, 9 a.m.–6 p.m.</span>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-3 md:mt-8 lg:mt-12 mx-auto">
+        <div class="container">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-t border-primary/30 py-5 lg:py-6">
+            <p class="text-[14px] text-[#4a5a3a] leading-[1.6]">© 2025 EcoFuel Mobility GmbH. All rights reserved.<br>Content is protected by copyright. Reproduction requires written consent.</p>
+            
+            <div class="flex items-center justify-end gap-3 md:gap-5 lg:gap-8 flex-wrap">
+                    <div>
+                        <img class="max-w-[39px]" src="images/master-card.svg" alt="">
+                    </div>
+                    <div>
+                        <img class="max-w-[46px]" src="images/googlePay.svg" alt="">
+                    </div>
+                    <div>
+                        <img class="max-w-[45px]" src="images/visa.svg" alt="">
+                    </div>
+                    <div>
+                        <img class="max-w-[70px]" src="images/paypal.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+     <!-- sign in modal -->
+    <el-dialog>
+        <dialog id="signInModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+            <el-dialog-backdrop class="fixed inset-0 bg-[#000]/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+            <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+            <el-dialog-panel class="relative transform overflow-hidden rounded-[20px] text-left shadow-xl outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:w-full sm:max-w-[1000px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+                <div class="bg-white overflow-hidden grid w-full max-w-[1000px] grid-cols-1 md:grid-cols-2 min-h-[540px] relative">
+
+                    <!-- LEFT -->
+                    <div class="px-4.5 md:px-9 py-7 md:py-10 flex flex-col justify-center bg-white">
+
+                    <!-- Header -->
+                    <div class="text-center mb-7">
+                        <div class="w-14 h-14 rounded-2xl bg-[#E6F1D7] flex items-center justify-center mx-auto mb-3.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b6d11" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        </div>
+                       <h1 class="text-[22px] font-extrabold text-gray-900 tracking-tight leading-tight mb-1.5" id="modalTitle">
+                        Sign in
+                        </h1>
+                        <p class="text-[14px] text-gray-500 leading-relaxed" id="modalSubtitle">
+                        Secure access to fuel management.
+                        </p>
+                    </div>
+
+
+                        <!-- Form -->
+                        <form class="flex flex-col gap-3.5" id="signinForm">
+
+                            <!-- Email -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                </div>
+                                <input required type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none"/>
+                            </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                </div>
+                                <input required type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                <button type="button" class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                            </div>
+                            </div>
+
+                            <!-- Remember -->
+                           <div class="flex items-center justify-between">
+
+                            <label for="remember1" class="flex items-center gap-2 text-[14px] text-gray-700 font-medium cursor-pointer">
+                                <input id="remember1" type="checkbox" class="w-4 h-4 accent-[#87C332] cursor-pointer">
+                                Stay signed in
+                            </label>
+
+                            <a href="#" class="text-[14px] text-[#87C332] font-semibold underline">
+                                Forgot password?
+                            </a>
+
+                            </div>
+
+                            <!-- Button -->
+                            <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                            Sign in
+                            </button>
+
+                        </form>
+
+                        <!-- Sign Up Form (hidden by default) -->
+                        <form class="hidden" id="signupForm">
+
+                            <div class="flex flex-col gap-3.5">
+                                <!-- First + Last Name -->
+                                <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">First Name *</label>
+                                    <input required type="text" placeholder="Max" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition"/>
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">Last Name *</label>
+                                    <input type="text" placeholder="Mustermann" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition"/>
+                                </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                    </div>
+                                    <input type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none"/>
+                                </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                    <button type="button" class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                                    </button>
+                                </div>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Confirm Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                </div>
+                                </div>
+
+                                <!-- Terms -->
+                                <label class="flex items-start gap-2 text-[13px] text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 mt-0.5 accent-[#87C332] cursor-pointer flex-shrink-0">
+                                I agree to the <a href="#" class="text-[#87C332] underline mx-1">Terms of Service</a> and <a href="#" class="text-[#87C332] underline ml-1">Privacy Policy</a>
+                                </label>
+
+                                <!-- Button -->
+                                <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                                Create Account
+                                </button>
+                            </div>
+                        </form>
+               
+                    <!-- Footer -->
+                    <div class="text-center mt-5 text-xs text-gray-400">
+                        © 2025 CO₂befreit —
+                        <a href="#" class="underline">Legal notice</a>
+                    </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="hidden md:block relative overflow-hidden">
+                        <img src="images/modal-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-85 rounded-tl-2xl rounded-bl-2xl">
+                    </div>
+
+                </div>
+
+            </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+    <!-- sign in modal -->
+
+     <!-- sign up modal -->
+    <el-dialog>
+        <dialog id="signUpModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent" style="right: var(--el-top-layer-scrollbar-offset, 0px);" open="">
+            <el-dialog-backdrop class="fixed inset-0 bg-[#000]/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in" inert=""></el-dialog-backdrop>
+
+            <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+            <el-dialog-panel class="relative transform overflow-hidden rounded-[20px] text-left shadow-xl outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:w-full sm:max-w-[1000px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+                <div class="bg-white overflow-hidden grid w-full max-w-[1000px] grid-cols-1 md:grid-cols-2 min-h-[540px] relative">
+
+                    <!-- LEFT -->
+                    <div class="px-4.5 md:px-9 py-7 md:py-10 flex flex-col justify-center bg-white">
+
+                    <!-- Header -->
+                    <div class="text-center mb-7">
+                        <div class="w-14 h-14 rounded-2xl bg-[#E6F1D7] flex items-center justify-center mx-auto mb-3.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b6d11" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        </div>
+                       <h1 class="text-[22px] font-extrabold text-gray-900 tracking-tight leading-tight mb-1.5" id="modalTitle">Create Account</h1>
+                        <p class="text-[14px] text-gray-500 leading-relaxed" id="modalSubtitle">Join CO₂befreit and start saving.</p>
+                    </div>
+
+
+                        <!-- Form -->
+                        <form class="flex flex-col gap-3.5 hidden" id="signupForm">
+
+                            <!-- Email -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                </div>
+                                <input required="" type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none">
+                            </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
+                                </div>
+                                <input required="" type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none">
+                                <button type="button" class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                            </div>
+
+                            <!-- Remember -->
+                           <div class="flex items-center justify-between">
+
+                            <label for="remember1" class="flex items-center gap-2 text-[14px] text-gray-700 font-medium cursor-pointer">
+                                <input id="remember1" type="checkbox" class="w-4 h-4 accent-[#87C332] cursor-pointer">
+                                Stay signed in
+                            </label>
+
+                            <a href="#" class="text-[14px] text-[#87C332] font-semibold underline">
+                                Forgot password?
+                            </a>
+
+                            </div>
+
+                            <!-- Button -->
+                            <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                            Sign in
+                            </button>
+
+                        </form>
+
+                        <!-- Sign Up Form (hidden by default) -->
+                        <form class="" id="signupForm">
+
+                            <div class="flex flex-col gap-3.5">
+                                <!-- First + Last Name -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">First Name *</label>
+                                    <input required="" type="text" placeholder="Max" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition">
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">Last Name *</label>
+                                    <input type="text" placeholder="Mustermann" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition">
+                                </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                    </div>
+                                    <input type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none">
+                                </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none">
+                                    <button type="button" class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </button>
+                                </div>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Confirm Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none">
+                                </div>
+                                </div>
+
+                                <!-- Terms -->
+                                <label class="flex items-start gap-2 text-[10.5px] md:text-[13px] text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="h-3 w-3 md:w-4 md:h-4 mt-0.5 accent-[#87C332] cursor-pointer flex-shrink-0">
+
+                                    I agree to the 
+                                    <a href="#" class="text-[#87C332] underline mx-1">Terms of Service</a> 
+                                    and <a href="#" class="text-[#87C332] underline ml-1">Privacy Policy</a>
+                                </label>
+
+                                <!-- Button -->
+                                <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                                Create Account
+                                </button>
+                            </div>
+                        </form>
+
+                    <!-- Footer -->
+                    <div class="text-center mt-5 text-xs text-gray-400">
+                        © 2025 CO₂befreit —
+                        <a href="#" class="underline">Legal notice</a>
+                    </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="hidden md:block relative overflow-hidden">
+                        <img src="images/modal-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-85 rounded-tl-2xl rounded-bl-2xl">
+                    </div>
+
+                </div>
+
+            </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+     <!-- sign up modal -->
+
+
+    <!-- Tailwind scrip -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <!-- link of aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom jQuery -->
+    <script src="js/scripts.js"></script>
+
+    <a href="#"
+        class="scrolltotop fixed shadow-[0_4px_24px_rgba(135,195,50,0.15)] right-[30px] bottom-[25px] hidden w-[38px] h-[38px] rounded-full bg-white items-center justify-center z-[2] transition-all duration-300 animate-top-up"
+        style="opacity: 1; display: flex;">
+        <img class="absolute left-1/2 top-1/2 transform -translate-1/2" src="images/scrolltop-arrow.svg" alt="">
+    </a>
+
+
+      <script>
+
+    // FAQ js code 
+        tailwind.config={theme:{extend:{fontFamily:{grotesk:['Space Grotesk','sans-serif']},colors:{primary:'#87C332','primary-dark':'#0f1f00','primary-hover':'#9ed93a'},maxWidth:{'8xl':'88rem'}}}}
+
+        function toggleFaq(btn){
+            const item = btn.closest('.faq-item');
+            const body = item.querySelector('.faq-body');
+            const chevron = item.querySelector('.faq-chevron');
+            const num = item.querySelector('.faq-num');
+            const isOpen = item.classList.contains('open');
+
+            document.querySelectorAll('.faq-item').forEach(el=>{
+                el.classList.remove('open');
+                const b = el.querySelector('.faq-body');
+                b.style.maxHeight = null;
+
+                el.querySelector('.faq-chevron').style.transform='';
+                el.querySelector('.faq-chevron').style.background='#f3f3f3';
+                el.querySelector('.faq-chevron svg').style.stroke='#666';
+                el.querySelector('.faq-num').style.background='#f0f9e0';
+                el.querySelector('.faq-num').style.color='#3b6d11';
+                el.style.borderColor='rgba(0,0,0,0.07)';
+            });
+
+            if(!isOpen){
+                item.classList.add('open');
+
+                // 🔥 Smooth height animation
+                body.style.maxHeight = body.scrollHeight + "px";
+
+                chevron.style.transform='rotate(180deg)';
+                chevron.style.background='#87C332';
+                chevron.querySelector('svg').style.stroke='#0f1f00';
+                num.style.background='#87C332';
+                num.style.color='#0f1f00';
+                item.style.borderColor='rgba(135,195,50,0.4)';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

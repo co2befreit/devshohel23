@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Contact - CO2befreit.de</title>
+    <!-- Fav Icon -->
+    <link rel="icon" href="images/favicon.svg">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- link of aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- tailwind css file -->
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="text-sm md:text-[16px] text-[#1E1E1C] font-montserrat bg-[#F3F0EE]">
+
+    <!-- nav area -->
+    <nav class="header-nav-wrap  flex justify-center">
+        <div class="header-nav fixed w-full z-[999] top-3.5 sm:top-4.5 md:top-5 xl:top-6.5">
+            <div class="container w-full">
+                <div
+                    class="nav-inner bg-white rounded-md shadow-[0px 20px 30px -30px #3B3A374D] px-4 md:px-5 xl:px-8 xxl:px-9 py-2.5 lg:py-4 xl:py-5">
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-5 lg:col-span-2 xl:col-span-2">
+                            <div>
+                                <a href="index.html">
+                                    <img class="max-w-[80px] md:max-w-[140px] xl:max-w-[160px]" src="images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-span-8 xl:col-span-7 hidden lg:block">
+                            <div class="main-menu">
+                                <ul class="flex items-center gap-5 lg:gap-5 xl:gap-5 xxl:gap-10 py-3 md:py-5 lg:py-0">
+                                    <li>
+                                        <a class="font-semibold text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="/">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="about.html">About us</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="product.html">Products</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="die-co2-studie.html">CO₂ study</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-[#1E1E1C] transition duration-300 hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="co2-measure.html">CO₂ measurement</a>
+                                    </li>
+                                    <li>
+                                        <a class="font-medium text-primary transition duration-300  hover:text-primary text-sm xl:text-base xxl:text-[17px]"
+                                            href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-7 lg:col-span-2 xl:col-span-3">
+                           
+                            <div class="flex items-center justify-end gap-2 lg:gap-2.5 font-montserrat">
+
+                                <!-- Language -->
+                                <div class="relative md:after:content-[''] after:absolute after:w-[1px] after:h-[70%] after:top-1/2 after:-translate-y-1/2 after:left-[100%] after:bg-black/10 mr-2">
+
+                                    <button id="langBtn"
+                                    class="flex items-center gap-[4px] bg-transparent border-0 cursor-pointer px-[10px] py-[8px] rounded-[8px] text-[#222] text-[13px] font-medium hover:bg-primary/14 transition">
+                                    
+                                    <!-- Globe Icon -->
+                                    <svg class="w-[16px] h-[16px] stroke-[#555]" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                        <path d="M2 12h20"/>
+                                    </svg>
+
+                                    <span id="selectedLang" class="lg:hidden xl:block text-[13px] xl:text-sm">ENG</span>
+
+                                    <!-- Chevron -->
+                                    <svg class="w-[14px] h-[14px] stroke-[#888] -ml-[2px]" viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                        <path d="m6 9 6 6 6-6"/>
+                                    </svg>
+                                    </button>
+
+                                <!-- Dropdown -->
+                                    <div id="langMenu"
+                                    class="absolute right-0 mt-3 sm:mt-5 w-[120px] bg-white border border-primary/22 rounded-[8px] shadow-md opacity-0 invisible transition-all duration-150 p-1.5">
+
+                                    <button data-lang="ENG"
+                                        class="lang-item w-full text-left px-2.5 py-1.5 text-[13px] xl:text-sm hover:bg-primary/14 flex items-center gap-2 rounded-md mb-0.5">
+                                        <span class="w-[18px] h-[18px] rounded-full overflow-hidden border border-black/10"></span>
+                                        English
+                                    </button>
+
+                                    <button data-lang="DEU"
+                                        class="lang-item w-full text-left px-2.5 py-1.5 text-[13px] xl:text-sm hover:bg-primary/14 flex items-center gap-2 rounded-md">
+                                        <span class="w-[18px] h-[18px] rounded-full overflow-hidden border border-black/10"></span>
+                                        Deutsch
+                                    </button>
+
+                                    </div>
+                                </div>
+
+                                <!-- Login -->
+                                <button command="show-modal" commandfor="signInModal"
+                                    class="login-button cursor-pointer hidden sm:flex items-center gap-[6px] bg-primary/14 border-1 border-primary/22 rounded-[9px] px-[16px] py-[8px] text-[#222] text-[13px] xl:text-sm font-semibold hover:bg-primary/25 hover:border-primary/28 transition whitespace-nowrap">
+                                    Log in
+                                </button>
+
+                                <!-- Register -->
+                                <button command="show-modal" commandfor="signUpModal"
+                                    class="register-button cursor-pointer hidden sm:flex items-center gap-[6px] bg-primary text-[#0f1f00] text-[13px] xl:text-sm font-bold px-[18px] py-[9px] rounded-[9px] shadow-[0_1px_3px_rgba(135,195,50,0.25)] hover:bg-[#9ed93a] active:scale-95 transition whitespace-nowrap">
+                                    Register
+                                    <svg class="lg:hidden xl:block w-[15px] h-[15px] stroke-[#0f1f00]" viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6"/>
+                                    </svg>
+                                </button>
+
+                                <button command="show-modal" commandfor="drawer" class="lg:hidden cursor-pointer sm:ml-2">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 12H21" stroke="#1E1E1C" stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                        <path d="M3 7H21" stroke="#1E1E1C" stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                        <path d="M3 17H21" stroke="#1E1E1C" stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header area -->
+    <header class="bg-[url('../images/contact_hero.png')] bg-cover bg-center bg-no-repeat min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] relative z-[9] after:absolute after:content-[''] after:block after:w-full after:h-full after:left-0 after:top-0 after:bg-gray-900/30 after:z-[-1]">
+
+
+    <div class="relative w-full min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] flex flex-col justify-center overflow-hidden text-white font-montserrat pt-[115px] md:pt-22 lg:pt-18 xl:pt-27 pb-6 sm:pb-0">
+        <div class="container">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 z-[2] bg-[rgba(5,12,0,0.10)]"></div>
+
+            <!-- Right Decoration -->
+            <div class="absolute top-1/2 right-[7vw] xl:right-[15vw] -translate-y-1/2 z-[5] w-[320px] h-[320px] rounded-full border border-[rgba(135,195,50,0.12)] flex items-center justify-center">
+                <div class="absolute w-[220px] h-[220px] rounded-full border border-[rgba(135,195,50,0.18)]"></div>
+                <div class="absolute w-[130px] h-[130px] rounded-full bg-[rgba(135,195,50,0.08)] border border-[rgba(135,195,50,0.25)]"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 text-center max-w-[1240px] mx-auto">
+
+                <!-- Heading -->
+                <h1 class="text-[26px] lg:text-[40px] xl:text-[60px] font-bold leading-[130%] tracking-[-0.025em] mb-5 sm:mb-6">
+                    <span class="text-secondary">Contact</span> <span>Us</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- header area -->
+
+    <!-- sidebar area -->
+    <el-dialog>
+        <dialog id="drawer" aria-labelledby="drawer-title"
+            class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+            <el-dialog-backdrop
+                class="absolute inset-0 bg-[#010b13a8] backdrop-blur-[5px] transition-opacity duration-400 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+
+            <div tabindex="0" class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+                <el-dialog-panel class="group/dialog-panel relative ml-auto block h-full w-full max-w-[300px]
+                transform transition duration-500 ease-in-out
+                data-closed:translate-x-full sm:duration-700">
+                    <!-- Close button, show/hide based on slide-over state. -->
+                    <div
+                        class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 duration-400 ease-in-out group-data-closed/dialog-panel:opacity-0 sm:-ml-10 sm:pr-4">
+                        <button type="button" command="close" commandfor="drawer"
+                            class="relative rounded-md text-gray-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 cursor-pointer">
+                            <span class="absolute -inset-2.5"></span>
+                            <span class="sr-only">Close panel</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-white/10 rounded-bl-xl rounded-tl-xl">
+
+                        <div class="px-4 sm:px-6 flex items-center justify-between">
+                            <h2 id="drawer-title" class="text-base font-semibold text-primary">Menu</h2>
+                            <div>
+                                <a href="#">
+                                    <img class="max-w-[90px]" src="images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                            <div class="lg:hidden border-t border-slate-200">
+                                <div class="border-b border-slate-200">
+                                    <a href="/" class="block py-3 font-medium text-[#1E1E1C]">Home</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="about.html" class="block py-3 font-medium text-[#1E1E1C]">About us</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="product.html" class="block py-3 font-medium text-[#1E1E1C]">Products</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="die-co2-studie.html" class="block py-3 font-medium text-[#1E1E1C]">CO₂ study</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="co2-measure.html" class="block py-3 font-medium text-[#1E1E1C]">CO₂ measurement</a>
+                                </div>
+                                <div class="border-b border-slate-200">
+                                    <a href="contact.html" class="block py-3 font-medium text-[#1E1E1C]">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sm:hidden mt-auto px-4 flex flex-col gap-3">
+                            <!-- Login -->
+                            <button command="show-modal" commandfor="signInModal"
+                                class="flex items-center gap-[6px] bg-primary/14 border-1 border-primary/22 rounded-[9px] px-[16px] py-[8px] text-[#222] text-[13px] xl:text-sm font-semibold hover:bg-primary/25 hover:border-primary/28 transition whitespace-nowrap justify-center w-full">
+                                Log in
+                            </button>
+
+                            <!-- Register -->
+                            <button command="show-modal" commandfor="signUpModal"
+                                class="flex items-center gap-[6px] bg-primary text-[#0f1f00] text-[13px] xl:text-sm font-bold px-[18px] py-[9px] rounded-[9px] shadow-[0_1px_3px_rgba(135,195,50,0.25)] hover:bg-[#9ed93a] active:scale-95 transition whitespace-nowrap w-full justify-center">
+                                Register
+                                <svg class="lg:hidden xl:block w-[15px] h-[15px] stroke-[#0f1f00]" viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <path d="m9 18 6-6-6-6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+    <!-- sidebar area -->
+
+
+    <!-- contact section -->
+    <section class="font-grotesk bg-[#f8f9f5] py-12 md:py-20">
+        <div class="container">
+            <div class="max-w-[1170px] mx-auto">
+            
+                <!-- Section header -->
+                <div class="text-center mb-10 md:mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E6F1D7] border border-primary/25 mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span class="text-[11px] font-bold tracking-[.1em] uppercase text-[#3b6d11]">Get in touch</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">How can we help?</h2>
+                <p class="text-[15px] text-gray-500 mt-2 max-w-sm mx-auto leading-relaxed">
+                    Fill in your details and a member of our team will get in touch with you.
+                </p>
+                </div>
+            
+                <!-- Main card -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-black/[0.06] shadow-sm flex flex-col md:flex-row">
+            
+                <!-- LEFT sidebar -->
+                <div class="relative w-full md:w-72 lg:w-80 flex-shrink-0 overflow-hidden min-h-[280px] md:min-h-0">
+                    <img
+                    src="images/contact_form_bg.png"
+                    alt="Contact"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d1a06]/90 via-[#0d1a06]/50 to-transparent"></div>
+            
+                    <div class="absolute bottom-0 inset-x-0 p-6 md:p-7 space-y-4">
+            
+                    <div class="space-y-1">
+                        <p class="text-[10px] font-bold tracking-[.1em] uppercase text-white/90">Support hours</p>
+                        <p class="text-[13px] text-white/80 leading-relaxed">Monday – Friday<br>8:30 a.m. to 5:00 p.m.</p>
+                    </div>
+            
+                    <div class="space-y-2.5 pt-1">
+                        <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                        </div>
+                        <span class="text-[12.5px] text-white/75">support@ecofuel-mobility.de</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="#87C332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                        </div>
+                        <span class="text-[12.5px] text-white/75">+49 (0) XXX - XXX XX XX</span>
+                        </div>
+                    </div>
+            
+                    <!-- Social icons — using your original SVG data URIs -->
+                    <div class="flex items-center gap-2 pt-1">
+                        <a href="/" aria-label="Facebook"
+                        class="w-9 h-9 rounded-lg bg-primary/90 flex items-center justify-center hover:bg-primary transition-colors duration-150">
+                        <!-- Facebook SVG path -->
+                        <svg class="w-9 h-9" viewBox="0 0 60 60" fill="none"><path d="M32.4 31.8H35.4L36.6 27H32.4V24.6C32.4 23.364 32.4 22.2 34.8 22.2H36.6V18.168C36.2088 18.1164 34.7316 18 33.1716 18C29.9136 18 27.6 19.9884 27.6 23.64V27H24V31.8H27.6V42H32.4V31.8Z" fill="white"/></svg>
+                        </a>
+                        <a href="/" aria-label="LinkedIn"
+                        class="w-9 h-9 rounded-lg bg-primary/90 flex items-center justify-center hover:bg-primary transition-colors duration-150">
+                        <svg class="w-9 h-9" viewBox="0 0 60 60" fill="none"><path d="M23.9279 21.6004C23.9276 22.2369 23.6745 22.8473 23.2241 23.2971C22.7738 23.747 22.1632 23.9995 21.5267 23.9992C20.8902 23.9989 20.2799 23.7457 19.83 23.2954C19.3802 22.8451 19.1276 22.2345 19.1279 21.598C19.1282 20.9615 19.3814 20.3512 19.8317 19.9013C20.282 19.4515 20.8926 19.1989 21.5291 19.1992C22.1656 19.1995 22.776 19.4527 23.2258 19.903C23.6757 20.3533 23.9282 20.9639 23.9279 21.6004ZM23.9999 25.7764H19.1999V40.8004H23.9999V25.7764ZM31.5839 25.7764H26.8079V40.8004H31.5359V32.9164C31.5359 28.5244 37.2599 28.1164 37.2599 32.9164V40.8004H41.9999V31.2844C41.9999 23.8804 33.5279 24.1564 31.5359 27.7924L31.5839 25.7764Z" fill="white"/></svg>
+                        </a>
+                        <a href="/" aria-label="Twitter"
+                        class="w-9 h-9 rounded-lg bg-primary/90 flex items-center justify-center hover:bg-primary transition-colors duration-150">
+                        <svg class="w-9 h-9" viewBox="0 0 60 60" fill="none"><path d="M42.1945 22.3883C41.2783 22.7935 40.3068 23.0597 39.3121 23.1779C40.3606 22.5508 41.1453 21.5639 41.5201 20.4011C40.5361 20.9867 39.4573 21.3971 38.3329 21.6191C37.5776 20.811 36.5765 20.275 35.4852 20.0946C34.3939 19.9141 33.2736 20.0993 32.2984 20.6212C31.3232 21.1432 30.5477 21.9727 30.0926 22.9808C29.6375 23.989 29.5282 25.1192 29.7817 26.1959C27.7862 26.0959 25.8341 25.5773 24.052 24.6739C22.27 23.7704 20.6978 22.5023 19.4377 20.9519C18.9916 21.718 18.7572 22.589 18.7585 23.4755C18.7585 25.2155 19.6441 26.7527 20.9905 27.6527C20.1937 27.6276 19.4144 27.4124 18.7177 27.0251V27.0875C18.7179 28.2463 19.1189 29.3694 19.8527 30.2664C20.5865 31.1633 21.6078 31.7789 22.7437 32.0087C22.004 32.2091 21.2284 32.2387 20.4757 32.0951C20.7959 33.0926 21.4201 33.9649 22.2608 34.59C23.1015 35.2151 24.1166 35.5616 25.1641 35.5811C24.123 36.3987 22.9311 37.0031 21.6563 37.3597C20.3816 37.7163 19.049 37.8182 17.7349 37.6595C20.0289 39.1348 22.6994 39.918 25.4269 39.9155C34.6585 39.9155 39.7069 32.2679 39.7069 25.6355C39.7069 25.4195 39.7009 25.2011 39.6913 24.9875C40.6739 24.2773 41.522 23.3975 42.1957 22.3895L42.1945 22.3883Z" fill="white"/></svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            
+                <!-- RIGHT: Form -->
+                <div class="flex-1 p-6 md:p-8 lg:p-10">
+                    <div>
+            
+                    <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight mb-1">Send us a message</h3>
+                    <p class="text-[14px] text-gray-500 mb-7 leading-relaxed">We'll get back to you within one business day.</p>
+            
+                    <form class="space-y-5">
+            
+                        <!-- Name + Email -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="block text-[12.5px] font-semibold text-gray-700">
+                            Name <span class="text-red-500">*</span>
+                            </label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-xl overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15 transition-all duration-150">
+                            <span class="px-3 text-gray-300 flex-shrink-0">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </span>
+                            <input type="text" name="name" placeholder="Your full name"
+                                class="flex-1 py-2.5 pr-3 text-sm bg-transparent border-none outline-none text-gray-900 placeholder:text-gray-300">
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="block text-[12.5px] font-semibold text-gray-700">
+                            Email <span class="text-red-500">*</span>
+                            </label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-xl overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15 transition-all duration-150">
+                            <span class="px-3 text-gray-300 flex-shrink-0">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                            </span>
+                            <input type="email" name="email" placeholder="your@email.de"
+                                class="flex-1 py-2.5 pr-3 text-sm bg-transparent border-none outline-none text-gray-900 placeholder:text-gray-300">
+                            </div>
+                        </div>
+                        </div>
+            
+                        <!-- Subject -->
+                        <div class="space-y-1.5">
+                        <label class="block text-[12.5px] font-semibold text-gray-700">
+                            Subject <span class="text-red-500">*</span>
+                        </label>
+                        <div class="flex items-center border-[1.5px] border-gray-200 rounded-xl overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15 transition-all duration-150">
+                            <span class="px-3 text-gray-300 flex-shrink-0">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </span>
+                            <input type="text" name="subject" placeholder="How can we help you?"
+                            class="flex-1 py-2.5 pr-3 text-sm bg-transparent border-none outline-none text-gray-900 placeholder:text-gray-300">
+                        </div>
+                        </div>
+            
+                        <!-- Message -->
+                        <div class="space-y-1.5">
+                        <label class="block text-[12.5px] font-semibold text-gray-700">
+                            Message <span class="text-red-500">*</span>
+                        </label>
+                        <textarea name="message" rows="5" placeholder="Send a message..."
+                            class="w-full border-[1.5px] border-gray-200 rounded-xl px-4 py-3 text-sm bg-white text-gray-900 placeholder:text-gray-300 outline-none resize-none focus:border-primary focus:ring-2 focus:ring-primary/15 transition-all duration-150">
+                        </textarea>
+                        </div>
+            
+                        <!-- Privacy -->
+                        <div class="flex items-start gap-2.5">
+                        <input type="checkbox" id="privacy" name="privacy"
+                            class="w-4 h-4 mt-0.5 accent-primary cursor-pointer flex-shrink-0 rounded">
+                        <label for="privacy" class="text-[12.5px] text-gray-400 leading-relaxed cursor-pointer">
+                            I agree to the <a href="/data" class="text-primary font-semibold underline">privacy policy</a> and consent to being contacted by EcoFuel Mobility GmbH.
+                        </label>
+                        </div>
+            
+                        <!-- Submit -->
+                        <button type="submit"
+                        class="inline-flex items-center gap-2 bg-primary text-[#0f1f00] font-bold text-[15px] px-8 py-3.5 rounded-xl border-none cursor-pointer hover:bg-[#9ed93a] active:scale-[0.97] transition-all duration-150 shadow-sm shadow-primary/20">
+                        Send message
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+            
+                    </form>
+                    </div>
+                </div>
+            
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section -->
+
+ 
+
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="bg-[#EAEAEA] text-[#3a5a10] font-grotesk">
+    <div class="container pt-9 md:pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.6fr] gap-10">
+
+        <!-- Brand -->
+        <div>
+            <div class="flex items-center gap-[10px] mb-4 lg:mb-5.5">
+            <a href="/">
+                <img class="max-w-[90px] md:max-w-[100px] xl:max-w-[130px]" src="images/logo.svg" alt="">
+            </a>
+            </div>
+            <p class="text-[17px] font-bold text-[#1a2e05] mb-2.5 md:mb-3 leading-snug">Drive. Save. Protect the climate.</p>
+            <p class="text-[15.5px] text-[#3a4a2a] leading-[1.7] mb-3.5 md:mb-5 lg:mb-6">With the CO₂befreit card you drive as usual, save with exclusive benefits and compensate every trip – for real mobility with responsibility.</p>
+            <div class="flex gap-2">
+            <a href="/" aria-label="Instagram" class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="/" aria-label="Facebook" class="w-[34px] h-[34px] rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center transition-all duration-150 hover:bg-primary hover:border-primary group">
+                <svg class="w-4 h-4 stroke-[#3a5a10] group-hover:stroke-[#0f1f00] transition-colors" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Navigation</div>
+            <ul class="flex flex-col gap-[13px] list-none">
+            <li><a href="/" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Home</a></li>
+            <li><a href="/about" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">About us</a></li>
+            <li><a href="/products" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Products</a></li>
+            <li><a href="/die-co2-studie" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂ study</a></li>
+            <li><a href="/co2-measure" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">CO₂ measurement</a></li>
+            <li><a href="/contact" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Legal</div>
+            <ul class="flex flex-col gap-[13px] list-none">
+            <li><a href="/impress" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Imprint</a></li>
+            <li><a href="/data" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Privacy policy (GDPR)</a></li>
+            <li><a href="/condition" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Terms of participation</a></li>
+            <li><a href="/cookie" class="text-[15.5px] text-[#3a4a2a] no-underline transition-colors duration-150 hover:text-primary flex items-center gap-[6px] before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-primary/70 before:flex-shrink-0 hover:before:bg-primary">Cookie settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <div class="text-[15px] font-bold text-[#1a2e05] tracking-[.07em] uppercase mb-[18px] pb-[10px] border-b border-primary/30">Contact &amp; Support</div>
+            <div class="flex items-start gap-[10px] mb-[14px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+            </div>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Email</strong>
+                <a href="mailto:support@ecofuel-mobility.de" class="text-[#3a4a2a] no-underline hover:text-primary transition-colors">support@ecofuel-mobility.de</a>
+            </div>
+            </div>
+            <div class="flex items-start gap-[10px] mb-[14px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+            </div>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Phone</strong>
+                +49 (0) XXX - XXX XX XX
+            </div>
+            </div>
+            <div class="flex items-start gap-[10px] mb-[14px]">
+            <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-[2px]">
+                <svg class="w-[15px] h-[15px] stroke-primary" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="text-[15px] text-[#3a4a2a] leading-[1.65]">
+                <strong class="text-[#1a2e05] font-semibold block text-[12.5px] tracking-[.05em] uppercase mb-0.5">Address</strong>
+                EcoFuel Mobility GmbH, Musterstraße 1, 12345 Berlin<br>
+                <span class="text-[#4a5a3a] text-[13.5px]">Mon–Fri, 9 a.m.–6 p.m.</span>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-3 md:mt-8 lg:mt-12 mx-auto">
+        <div class="container">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-t border-primary/30 py-5 lg:py-6">
+            <p class="text-[14px] text-[#4a5a3a] leading-[1.6]">© 2025 EcoFuel Mobility GmbH. All rights reserved.<br>Content is protected by copyright. Reproduction requires written consent.</p>
+            
+            <div class="flex items-center justify-end gap-3 md:gap-5 lg:gap-8 flex-wrap">
+                    <div>
+                        <img class="max-w-[39px]" src="images/master-card.svg" alt="">
+                    </div>
+                    <div>
+                        <img class="max-w-[46px]" src="images/googlePay.svg" alt="">
+                    </div>
+                    <div>
+                        <img class="max-w-[45px]" src="images/visa.svg" alt="">
+                    </div>
+                    <div>
+                        <img class="max-w-[70px]" src="images/paypal.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+     <!-- sign in modal -->
+    <el-dialog>
+        <dialog id="signInModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+            <el-dialog-backdrop class="fixed inset-0 bg-[#000]/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+            <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+            <el-dialog-panel class="relative transform overflow-hidden rounded-[20px] text-left shadow-xl outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:w-full sm:max-w-[1000px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+                <div class="bg-white overflow-hidden grid w-full max-w-[1000px] grid-cols-1 md:grid-cols-2 min-h-[540px] relative">
+
+                    <!-- LEFT -->
+                    <div class="px-4.5 md:px-9 py-7 md:py-10 flex flex-col justify-center bg-white">
+
+                    <!-- Header -->
+                    <div class="text-center mb-7">
+                        <div class="w-14 h-14 rounded-2xl bg-[#E6F1D7] flex items-center justify-center mx-auto mb-3.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b6d11" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        </div>
+                       <h1 class="text-[22px] font-extrabold text-gray-900 tracking-tight leading-tight mb-1.5" id="modalTitle">
+                        Sign in
+                        </h1>
+                        <p class="text-[14px] text-gray-500 leading-relaxed" id="modalSubtitle">
+                        Secure access to fuel management.
+                        </p>
+                    </div>
+
+
+                        <!-- Form -->
+                        <form class="flex flex-col gap-3.5" id="signinForm">
+
+                            <!-- Email -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                </div>
+                                <input required type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none"/>
+                            </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                </div>
+                                <input required type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                <button type="button" class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                            </div>
+                            </div>
+
+                            <!-- Remember -->
+                           <div class="flex items-center justify-between">
+
+                            <label for="remember1" class="flex items-center gap-2 text-[14px] text-gray-700 font-medium cursor-pointer">
+                                <input id="remember1" type="checkbox" class="w-4 h-4 accent-[#87C332] cursor-pointer">
+                                Stay signed in
+                            </label>
+
+                            <a href="#" class="text-[14px] text-[#87C332] font-semibold underline">
+                                Forgot password?
+                            </a>
+
+                            </div>
+
+                            <!-- Button -->
+                            <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                            Sign in
+                            </button>
+
+                        </form>
+
+                        <!-- Sign Up Form (hidden by default) -->
+                        <form class="hidden" id="signupForm">
+
+                            <div class="flex flex-col gap-3.5">
+                                <!-- First + Last Name -->
+                                <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">First Name *</label>
+                                    <input required type="text" placeholder="Max" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition"/>
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">Last Name *</label>
+                                    <input type="text" placeholder="Mustermann" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition"/>
+                                </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                    </div>
+                                    <input type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none"/>
+                                </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                    <button type="button" class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                                    </button>
+                                </div>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Confirm Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none"/>
+                                </div>
+                                </div>
+
+                                <!-- Terms -->
+                                <label class="flex items-start gap-2 text-[13px] text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 mt-0.5 accent-[#87C332] cursor-pointer flex-shrink-0">
+                                I agree to the <a href="#" class="text-[#87C332] underline mx-1">Terms of Service</a> and <a href="#" class="text-[#87C332] underline ml-1">Privacy Policy</a>
+                                </label>
+
+                                <!-- Button -->
+                                <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                                Create Account
+                                </button>
+                            </div>
+                        </form>
+               
+                    <!-- Footer -->
+                    <div class="text-center mt-5 text-xs text-gray-400">
+                        © 2025 CO₂befreit —
+                        <a href="#" class="underline">Legal notice</a>
+                    </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="hidden md:block relative overflow-hidden">
+                        <img src="images/modal-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-85 rounded-tl-2xl rounded-bl-2xl">
+                    </div>
+
+                </div>
+
+            </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+    <!-- sign in modal -->
+
+     <!-- sign up modal -->
+    <el-dialog>
+        <dialog id="signUpModal" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent" style="right: var(--el-top-layer-scrollbar-offset, 0px);" open="">
+            <el-dialog-backdrop class="fixed inset-0 bg-[#000]/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in" inert=""></el-dialog-backdrop>
+
+            <div tabindex="0" class="flex min-h-full justify-center p-4 text-center focus:outline-none items-center">
+            <el-dialog-panel class="relative transform overflow-hidden rounded-[20px] text-left shadow-xl outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:w-full sm:max-w-[1000px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+                <div class="bg-white overflow-hidden grid w-full max-w-[1000px] grid-cols-1 md:grid-cols-2 min-h-[540px] relative">
+
+                    <!-- LEFT -->
+                    <div class="px-4.5 md:px-9 py-7 md:py-10 flex flex-col justify-center bg-white">
+
+                    <!-- Header -->
+                    <div class="text-center mb-7">
+                        <div class="w-14 h-14 rounded-2xl bg-[#E6F1D7] flex items-center justify-center mx-auto mb-3.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b6d11" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        </div>
+                       <h1 class="text-[22px] font-extrabold text-gray-900 tracking-tight leading-tight mb-1.5" id="modalTitle">Create Account</h1>
+                        <p class="text-[14px] text-gray-500 leading-relaxed" id="modalSubtitle">Join CO₂befreit and start saving.</p>
+                    </div>
+
+
+                        <!-- Form -->
+                        <form class="flex flex-col gap-3.5 hidden" id="signupForm">
+
+                            <!-- Email -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                </div>
+                                <input required="" type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none">
+                            </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div>
+                            <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                            <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                <div class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
+                                </div>
+                                <input required="" type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none">
+                                <button type="button" class="px-3 text-gray-400">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                            </div>
+
+                            <!-- Remember -->
+                           <div class="flex items-center justify-between">
+
+                            <label for="remember1" class="flex items-center gap-2 text-[14px] text-gray-700 font-medium cursor-pointer">
+                                <input id="remember1" type="checkbox" class="w-4 h-4 accent-[#87C332] cursor-pointer">
+                                Stay signed in
+                            </label>
+
+                            <a href="#" class="text-[14px] text-[#87C332] font-semibold underline">
+                                Forgot password?
+                            </a>
+
+                            </div>
+
+                            <!-- Button -->
+                            <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                            Sign in
+                            </button>
+
+                        </form>
+
+                        <!-- Sign Up Form (hidden by default) -->
+                        <form class="" id="signupForm">
+
+                            <div class="flex flex-col gap-3.5">
+                                <!-- First + Last Name -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">First Name *</label>
+                                    <input required="" type="text" placeholder="Max" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition">
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-semibold text-gray-700 mb-1">Last Name *</label>
+                                    <input type="text" placeholder="Mustermann" class="w-full border-[1.5px] border-gray-200 rounded-[10px] px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-[#87C332] focus:ring-4 focus:ring-[#87C332]/20 transition">
+                                </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Email address *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                    </div>
+                                    <input type="email" placeholder="your@email.com" class="flex-1 py-2.5 pr-3 text-sm text-gray-900 bg-transparent outline-none">
+                                </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none">
+                                    <button type="button" class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </button>
+                                </div>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div>
+                                <label class="block text-[14px] font-semibold text-gray-700 mb-1">Confirm Password *</label>
+                                <div class="flex items-center border-[1.5px] border-gray-200 rounded-[10px] bg-white focus-within:border-[#87C332] focus-within:ring-4 focus-within:ring-[#87C332]/20 transition">
+                                    <div class="px-3 text-gray-400">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
+                                    </div>
+                                    <input type="password" placeholder="••••••••" class="flex-1 py-2.5 text-sm text-gray-900 bg-transparent outline-none">
+                                </div>
+                                </div>
+
+                                <!-- Terms -->
+                                <label class="flex items-start gap-2 text-[10.5px] md:text-[13px] text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="h-3 w-3 md:w-4 md:h-4 mt-0.5 accent-[#87C332] cursor-pointer flex-shrink-0">
+
+                                    I agree to the 
+                                    <a href="#" class="text-[#87C332] underline mx-1">Terms of Service</a> 
+                                    and <a href="#" class="text-[#87C332] underline ml-1">Privacy Policy</a>
+                                </label>
+
+                                <!-- Button -->
+                                <button class="w-full bg-[#87C332] text-[#0f1f00] text-[15px] font-bold py-3 rounded-[10px] mt-1 hover:bg-[#9ed93a] transition">
+                                Create Account
+                                </button>
+                            </div>
+                        </form>
+
+                    <!-- Footer -->
+                    <div class="text-center mt-5 text-xs text-gray-400">
+                        © 2025 CO₂befreit —
+                        <a href="#" class="underline">Legal notice</a>
+                    </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="hidden md:block relative overflow-hidden">
+                        <img src="images/modal-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-85 rounded-tl-2xl rounded-bl-2xl">
+                    </div>
+
+                </div>
+
+            </el-dialog-panel>
+            </div>
+        </dialog>
+    </el-dialog>
+     <!-- sign up modal -->
+
+
+    <!-- Tailwind scrip -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <!-- link of aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom jQuery -->
+    <script src="js/scripts.js"></script>
+
+    <a href="#"
+        class="scrolltotop fixed shadow-[0_4px_24px_rgba(135,195,50,0.15)] right-[30px] bottom-[25px] hidden w-[38px] h-[38px] rounded-full bg-white items-center justify-center z-[2] transition-all duration-300 animate-top-up"
+        style="opacity: 1; display: flex;">
+        <img class="absolute left-1/2 top-1/2 transform -translate-1/2" src="images/scrolltop-arrow.svg" alt="">
+    </a>
+
+
+      <script>
+
+    // FAQ js code 
+        tailwind.config={theme:{extend:{fontFamily:{grotesk:['Space Grotesk','sans-serif']},colors:{primary:'#87C332','primary-dark':'#0f1f00','primary-hover':'#9ed93a'},maxWidth:{'8xl':'88rem'}}}}
+
+        function toggleFaq(btn){
+            const item = btn.closest('.faq-item');
+            const body = item.querySelector('.faq-body');
+            const chevron = item.querySelector('.faq-chevron');
+            const num = item.querySelector('.faq-num');
+            const isOpen = item.classList.contains('open');
+
+            document.querySelectorAll('.faq-item').forEach(el=>{
+                el.classList.remove('open');
+                const b = el.querySelector('.faq-body');
+                b.style.maxHeight = null;
+
+                el.querySelector('.faq-chevron').style.transform='';
+                el.querySelector('.faq-chevron').style.background='#f3f3f3';
+                el.querySelector('.faq-chevron svg').style.stroke='#666';
+                el.querySelector('.faq-num').style.background='#f0f9e0';
+                el.querySelector('.faq-num').style.color='#3b6d11';
+                el.style.borderColor='rgba(0,0,0,0.07)';
+            });
+
+            if(!isOpen){
+                item.classList.add('open');
+
+                // 🔥 Smooth height animation
+                body.style.maxHeight = body.scrollHeight + "px";
+
+                chevron.style.transform='rotate(180deg)';
+                chevron.style.background='#87C332';
+                chevron.querySelector('svg').style.stroke='#0f1f00';
+                num.style.background='#87C332';
+                num.style.color='#0f1f00';
+                item.style.borderColor='rgba(135,195,50,0.4)';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
