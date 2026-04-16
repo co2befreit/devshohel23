@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   // =========================
   // Header Sticky + Show/Hide
   // =========================
